@@ -90,7 +90,7 @@ export default function JobDetails(props) {
       
     hvacSystemType: {"type":"select","label":"HVAC System Type","required":true,"options":[{"value":"Central_AC","label":"Central AC"},{"value":"Heat_pump","label":"Heat Pump"},{"value":"Gas_furnace","label":"Gas Furnace"},{"value":"Electric_furnace","label":"Electric Furnace"},{"value":"Gas_boiler","label":"Gas Boiler"},{"value":"Electric_boiler","label":"Electric Boiler"},{"value":"Ductless","label":"Ductless Mini-Split"},{"value":"Water_heater","label":"Water Heater"}],"searchable":true,"helpText":"What type of HVAC system do you need service for?"},
       
-    hvacProjectType: {"type":"radio","label":"Project Type","required":true,"options":[{"value":"New_unit_installed","label":"New Installation"},{"value":"Repair","label":"Repair"},{"value":"Maintenance","label":"Maintenance"}],"variant":"card","inline":true},
+    hvacProjectType: {"type":"radio","label":"Project Type","required":true,"options":[{"value":"New_unit_installed","label":"New Installation"},{"value":"Repair","label":"Repair"}],"variant":"card","inline":true},
       
     kitchenProjectType: {"type":"select","label":"Kitchen Project Focus","required":true,"options":[{"value":"Floor_plan","label":"Floor Plan Changes"},{"value":"Cabinets","label":"Cabinets"},{"value":"Appliances","label":"Appliances"},{"value":"Counter_tops_or_sinks","label":"Countertops/Sinks"},{"value":"Flooring","label":"Flooring"},{"value":"Complete_remodel","label":"Complete Remodel"}]},
       

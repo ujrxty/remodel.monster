@@ -94,7 +94,9 @@ export default function PersonalInfo(props) {
       
     kitchenProjectType: {"type":"select","label":"Kitchen Project Focus","required":true,"options":[{"value":"Floor_plan","label":"Floor Plan Changes"},{"value":"Cabinets","label":"Cabinets"},{"value":"Appliances","label":"Appliances"},{"value":"Counter_tops_or_sinks","label":"Countertops/Sinks"},{"value":"Flooring","label":"Flooring"},{"value":"Complete_remodel","label":"Complete Remodel"}]},
       
-    bathroomProjectType: {"type":"select","label":"Bathroom Project Focus","required":true,"options":[{"value":"Bath_sinks","label":"Sink/Vanity"},{"value":"Shower","label":"Shower"},{"value":"Bathtub","label":"Bathtub"},{"value":"Toilet","label":"Toilet"},{"value":"Tile","label":"Tile Work"},{"value":"Full_bathroom","label":"Complete Remodel"}]}
+    bathroomProjectType: {"type":"select","label":"Bathroom Project Focus","required":true,"options":[{"value":"Bath_sinks","label":"Sink/Vanity"},{"value":"Shower","label":"Shower"},{"value":"Bathtub","label":"Bathtub"},{"value":"Toilet","label":"Toilet"},{"value":"Tile","label":"Tile Work"},{"value":"Full_bathroom","label":"Complete Remodel"}]},
+      
+    bestCallTime: {"type":"select","label":"Best time to call","required":true,"options":[{"value":"Anytime","label":"Anytime"},{"value":"Morning","label":"Morning (8AM-12PM)"},{"value":"Afternoon","label":"Afternoon (12PM-5PM)"},{"value":"Evening","label":"Evening (5PM-8PM)"}]}
       
   };
   
@@ -165,6 +167,26 @@ export default function PersonalInfo(props) {
         helpText="Please enter your 10-digit phone number"
         min={undefined}
         max={undefined}
+      />
+          
+      <SelectField
+        name="bestCallTime"
+        label="Best time to call"
+        value={formData.bestCallTime}
+        onChange={onChange}
+        onValidate={handleValidate}
+        options={[
+          { value: 'Anytime', label: 'Anytime' },
+          { value: 'Morning', label: 'Morning (8AM-12PM)' },
+          { value: 'Afternoon', label: 'Afternoon (12PM-5PM)' },
+          { value: 'Evening', label: 'Evening (5PM-8PM)' }
+        ]}
+        required={true}
+        error={errors.bestCallTime || localErrors.bestCallTime}
+        placeholder="Select best time..."
+        searchable={false}
+        grouped={false}
+        size="default"
       />
           
     </div>

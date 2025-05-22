@@ -35,6 +35,8 @@ export async function POST(request) {
     userIp: finalIp,
     userAgent: userAgent,
     webSiteUrl: "homeimprovement.online",
+    bestCallTime: formData.bestCallTime || 'Anytime',
+    price: 0.01, // Required for fullpost endpoint
     // API spec required fields with proper mapping
     
     firstName: formData.firstName,

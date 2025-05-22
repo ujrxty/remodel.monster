@@ -84,6 +84,37 @@ export default function ConditionalFieldGroup({
     
     // Add more conditional logic for specific services here
     if (jobType === 'hvac') {
+      if (!fieldDefinitions.hvacAirType) {
+        tempFields.hvacAirType = {
+          type: 'radio',
+          label: 'Heating/Cooling Needs',
+          required: true,
+          options: [
+            { value: 'Cooling', label: 'Cooling Only' },
+            { value: 'Heating', label: 'Heating Only' },
+            { value: 'Heating_and_cooling', label: 'Both Heating & Cooling' }
+          ],
+          variant: 'card',
+          inline: true,
+          helpText: 'What type of HVAC service do you need?'
+        };
+      }
+      
+      if (!fieldDefinitions.hvacProjectType) {
+        tempFields.hvacProjectType = {
+          type: 'radio',
+          label: 'Project Type',
+          required: true,
+          options: [
+            { value: 'New_unit_installed', label: 'New Installation' },
+            { value: 'Repair', label: 'Repair' }
+            // Remove 'Maintenance' - not accepted by API
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
       if (!fieldDefinitions.hvacSystemType) {
         tempFields.hvacSystemType = {
           type: 'select',
@@ -91,11 +122,16 @@ export default function ConditionalFieldGroup({
           required: true,
           options: [
             { value: 'Central_AC', label: 'Central AC' },
+            { value: 'Gas_boiler', label: 'Gas Boiler' },
+            { value: 'Propane_boiler', label: 'Propane Boiler' },
+            { value: 'Oil_boiler', label: 'Oil Boiler' },
+            { value: 'Electric_boiler', label: 'Electric Boiler' },
             { value: 'Heat_pump', label: 'Heat Pump' },
-            { value: 'Furnace', label: 'Furnace' },
-            { value: 'Boiler', label: 'Boiler' },
-            { value: 'Ductless', label: 'Ductless Mini-Split' },
-            { value: 'Water_heater', label: 'Water Heater' }
+            { value: 'Water_heater', label: 'Water Heater' },
+            { value: 'Gas_furnace', label: 'Gas Furnace' },
+            { value: 'Propane_furnace', label: 'Propane Furnace' },
+            { value: 'Oil_furnace', label: 'Oil Furnace' },
+            { value: 'Electric_furnace', label: 'Electric Furnace' }
           ],
           searchable: true,
           helpText: 'What type of HVAC system do you need service for?'
