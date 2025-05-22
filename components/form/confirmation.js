@@ -19,6 +19,9 @@ export default function Confirmation(props) {
   // Local state for field-level validation
   const [localErrors, setLocalErrors] = useState({});
   
+  // TCPA compliant consent language
+  const tcpaLanguage = "By checking this box and submitting this form, I consent to receive marketing communications including phone calls, text messages (SMS), emails, and other electronic communications from home improvement online and/or its partners, affiliates, and authorized representatives regarding home improvement services and related offers. I understand that calls and text messages may be made using automated technology, message and data rates may apply, consent is not required to purchase services, and I can revoke consent at any time by replying STOP to text messages or calling to opt out.";
+  
   // Handle field validation
   const handleValidate = (fieldName, value, error) => {
     // Get field definition from our config
@@ -107,38 +110,49 @@ export default function Confirmation(props) {
       
       {/* Render all configured fields for this step */}
       
-      <div className="flex items-start space-x-2">
-        <input
-          id="tcpa"
-          name="tcpa"
-          type="checkbox"
-          checked={formData.tcpa}
-          onChange={(e) => {
-            onChange('tcpa', e.target.checked);
-            handleValidate('tcpa', e.target.checked);
-          }}
-          required={true}
-          className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary"
-        />
-        <label
-          htmlFor="tcpa"
-          className="text-sm text-foreground"
-        >
-          I agree to be contacted {true && <span className="text-destructive">*</span>}
-        </label>
+      <div className="border border-border rounded-lg p-4 bg-muted/20">
+        <div className="flex items-start space-x-3">
+          <input
+            id="tcpa"
+            name="tcpa"
+            type="checkbox"
+            checked={formData.tcpa === "true" || formData.tcpa === true}
+            onChange={(e) => {
+              const consentLanguage = "By checking this box and submitting this form, I consent to receive marketing communications including phone calls, text messages (SMS), emails, and other electronic communications from home improvement online and/or its partners, affiliates, and authorized representatives regarding home improvement services and related offers. I understand that calls and text messages may be made using automated technology, message and data rates may apply, consent is not required to purchase services, and I can revoke consent at any time by replying STOP to text messages or calling to opt out.";
+              onChange('tcpa', e.target.checked);
+              onChange('tcpaLanguage', consentLanguage);
+              handleValidate('tcpa', e.target.checked);
+            }}
+            required={true}
+            className="mt-1 h-4 w-4 rounded border-border text-primary focus:ring-primary flex-shrink-0"
+          />
+          <label
+            htmlFor="tcpa"
+            className="text-sm text-foreground leading-relaxed"
+          >
+            <span className="font-medium">I agree to receive communications</span> <span className="text-destructive">*</span>
+            <div className="mt-2 text-xs text-muted-foreground leading-relaxed">
+              By checking this box and submitting this form, I consent to receive marketing communications including phone calls, text messages (SMS), emails, and other electronic communications from home improvement online and/or its partners, affiliates, and authorized representatives regarding home improvement services and related offers. I understand that:
+            </div>
+            <ul className="mt-2 text-xs text-muted-foreground space-y-1 ml-4">
+              <li>• Calls and text messages may be made using automated technology</li>
+              <li>• Message and data rates may apply</li>
+              <li>• Consent is not required to purchase services</li>
+              <li>• I can revoke consent at any time by replying STOP to text messages or calling to opt out</li>
+            </ul>
+          </label>
+        </div>
+        {(errors.tcpa || localErrors.tcpa) && (
+          <p className="mt-2 text-sm text-destructive">
+            {errors.tcpa || localErrors.tcpa}
+          </p>
+        )}
       </div>
-      {(errors.tcpa || localErrors.tcpa) && (
-        <p className="mt-1 text-sm text-destructive">
-          {errors.tcpa || localErrors.tcpa}
-        </p>
-      )}
       
-      
-          
       <input 
         type="hidden" 
         name="tcpaLanguage" 
-        value="By submitting this form, I agree to receive phone calls and text messages from this company and its partners. I understand these calls may be generated using an automated technology." 
+        value={formData.tcpaLanguage || ""}
       />
           
     </div>
