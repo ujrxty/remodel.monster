@@ -32,21 +32,41 @@ export default function ConditionalFieldGroup({
     // Add all conditional fields if they're not defined in the schema
     const tempFields = {};
     
-    // Process windows field
-    if (jobType === 'windows' && !fieldDefinitions.numberOfWindows) {
-      tempFields.numberOfWindows = {
-        type: 'number',
-        label: 'Number of Windows',
-        required: true,
-        validation: {
-          min: 1,
-          max: 100,
-          pattern: '^[0-9]+$',
-          patternMessage: 'Please enter a valid number'
-        },
-        helpText: 'How many windows need to be replaced or repaired?'
-      };
-    }
+    // Process windows fields
+    if (jobType === 'windows') {
+      if (!fieldDefinitions.windowsProjectType) {
+        tempFields.windowsProjectType = {
+          type: 'select',
+          label: 'Window Project Type',
+          required: true,
+          options: [
+            { value: 'Interested_in_replacement_windows', label: 'Replacement Windows' },
+            { value: 'Need_repair_services_at_this_time', label: 'Repair Services' },
+            { value: 'Need_repair_but_interested_in_new_windows', label: 'Repair + Future Replacement' }
+          ],
+          helpText: 'What type of window project are you planning?'
+        };
+      }
+      
+      if (!fieldDefinitions.numberOfWindows) {
+        tempFields.numberOfWindows = {
+          type: 'number',
+          label: 'Number of Windows',
+          required: true,
+          validation: {
+            min: 1,
+            max: 100,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid number'
+          },
+          helpText: 'How many windows need to be replaced or repaired?'
+        };
+      }
+    }</thinking>
+
+<function_calls>
+<invoke name="TodoWrite">
+<parameter name="todos">[{"id": "p2-1", "content": "Fix Windows field option values to match API spec", "status": "completed", "priority": "high"}, {"id": "p2-2", "content": "Add complete Electrical conditional fields (2 fields)", "status": "in_progress", "priority": "high"}, {"id": "p2-3", "content": "Add complete Plumbing conditional fields (2 fields)", "status": "pending", "priority": "high"}, {"id": "p2-4", "content": "Complete Kitchen conditional fields implementation", "status": "pending", "priority": "medium"}, {"id": "p2-5", "content": "Complete Bathroom conditional fields implementation", "status": "pending", "priority": "medium"}, {"id": "p2-6", "content": "Complete Doors conditional fields (3 fields)", "status": "pending", "priority": "medium"}, {"id": "p2-7", "content": "Test all 6 major job types for API compliance", "status": "pending", "priority": "high"}]
     
     // Process door fields
     if (jobType === 'doors') {
@@ -57,8 +77,7 @@ export default function ConditionalFieldGroup({
           required: true,
           options: [
             { value: 'New_installation', label: 'New Installation' },
-            { value: 'Repair', label: 'Repair' },
-            { value: 'Replacement', label: 'Replacement' }
+            { value: 'Repair', label: 'Repair' }
           ],
           helpText: 'What type of door project are you planning?'
         };
@@ -72,11 +91,23 @@ export default function ConditionalFieldGroup({
           options: [
             { value: 'Wood', label: 'Wood' },
             { value: 'Metal', label: 'Metal' },
-            { value: 'Fiberglass', label: 'Fiberglass' },
             { value: 'Composite', label: 'Composite' },
             { value: 'Other', label: 'Other' }
           ],
           variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.preHung) {
+        tempFields.preHung = {
+          type: 'radio',
+          label: 'Pre-Hung Door?',
+          required: true,
+          options: [
+            { value: 'YES', label: 'Yes' },
+            { value: 'NO', label: 'No' }
+          ],
           inline: true
         };
       }
@@ -135,6 +166,79 @@ export default function ConditionalFieldGroup({
           ],
           searchable: true,
           helpText: 'What type of HVAC system do you need service for?'
+        };
+      }
+    }
+    
+    // Add electrical fields
+    if (jobType === 'electrical') {
+      if (!fieldDefinitions.electricalProjectType) {
+        tempFields.electricalProjectType = {
+          type: 'radio',
+          label: 'Project Type',
+          required: true,
+          options: [
+            { value: 'Install', label: 'New Installation' },
+            { value: 'Repair', label: 'Repair Work' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.electricalServiceType) {
+        tempFields.electricalServiceType = {
+          type: 'select',
+          label: 'Service Type',
+          required: true,
+          options: [
+            { value: 'Electric_for_home_addition_or_remodel', label: 'Home Addition/Remodel' },
+            { value: 'Electrical_wiring_or_panel_upgrade', label: 'Wiring/Panel Upgrade' },
+            { value: 'Generator', label: 'Generator Installation' },
+            { value: 'Home_energy_audit', label: 'Energy Audit' },
+            { value: 'Low_voltage_wiring', label: 'Low Voltage Wiring' },
+            { value: 'Outdoor_lighting', label: 'Outdoor Lighting' }
+          ],
+          searchable: true,
+          helpText: 'What type of electrical service do you need?'
+        };
+      }
+    }
+    
+    // Add plumbing fields
+    if (jobType === 'plumbing') {
+      if (!fieldDefinitions.plumbingProjectType) {
+        tempFields.plumbingProjectType = {
+          type: 'radio',
+          label: 'Project Type',
+          required: true,
+          options: [
+            { value: 'Install', label: 'New Installation' },
+            { value: 'Repair', label: 'Repair Work' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.plumbingServiceType) {
+        tempFields.plumbingServiceType = {
+          type: 'select',
+          label: 'Service Type',
+          required: true,
+          options: [
+            { value: 'Drain_cleaning', label: 'Drain Cleaning' },
+            { value: 'Install_or_repair_water_heater', label: 'Water Heater' },
+            { value: 'Plumbing_work', label: 'General Plumbing' },
+            { value: 'Septic_install_or_replace', label: 'Septic Install/Replace' },
+            { value: 'Septic_repair', label: 'Septic Repair' },
+            { value: 'Septic_clean_or_pump_out', label: 'Septic Cleaning' },
+            { value: 'Sewer_main', label: 'Sewer Main' },
+            { value: 'Well_pumps', label: 'Well Pumps' },
+            { value: 'Water_main', label: 'Water Main' }
+          ],
+          searchable: true,
+          helpText: 'What type of plumbing service do you need?'
         };
       }
     }

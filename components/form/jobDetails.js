@@ -80,11 +80,11 @@ export default function JobDetails(props) {
       
     numberOfWindows: {"type":"number","label":"Number of Windows","required":true,"validation":{"min":1,"max":100,"pattern":"^[0-9]+$","patternMessage":"Please enter a valid number"},"helpText":"How many windows need to be replaced or repaired?"},
       
-    windowsProjectType: {"type":"select","label":"Window Project Type","required":true,"options":[{"value":"replacement","label":"Replacement Windows"},{"value":"repair","label":"Window Repair"},{"value":"new","label":"New Installation"}],"helpText":"What type of window project are you planning?"},
+    windowsProjectType: {"type":"select","label":"Window Project Type","required":true,"options":[{"value":"Interested_in_replacement_windows","label":"Replacement Windows"},{"value":"Need_repair_services_at_this_time","label":"Repair Services"},{"value":"Need_repair_but_interested_in_new_windows","label":"Repair + Future Replacement"}],"helpText":"What type of window project are you planning?"},
       
-    doorProjectType: {"type":"select","label":"Door Project Type","required":true,"options":[{"value":"New_installation","label":"New Installation"},{"value":"Repair","label":"Repair"},{"value":"Replacement","label":"Replacement"}],"helpText":"What type of door project are you planning?"},
+    doorProjectType: {"type":"select","label":"Door Project Type","required":true,"options":[{"value":"New_installation","label":"New Installation"},{"value":"Repair","label":"Repair"}],"helpText":"What type of door project are you planning?"},
       
-    doorsMaterial: {"type":"radio","label":"Door Material","required":true,"options":[{"value":"Wood","label":"Wood"},{"value":"Metal","label":"Metal"},{"value":"Fiberglass","label":"Fiberglass"},{"value":"Composite","label":"Composite"},{"value":"Other","label":"Other"}],"variant":"card","inline":true},
+    doorsMaterial: {"type":"radio","label":"Door Material","required":true,"options":[{"value":"Wood","label":"Wood"},{"value":"Metal","label":"Metal"},{"value":"Composite","label":"Composite"},{"value":"Other","label":"Other"}],"variant":"card","inline":true},
       
     preHung: {"type":"radio","label":"Pre-Hung Door?","required":true,"options":[{"value":"YES","label":"Yes"},{"value":"NO","label":"No"}],"inline":true},
       
@@ -92,9 +92,9 @@ export default function JobDetails(props) {
       
     hvacProjectType: {"type":"radio","label":"Project Type","required":true,"options":[{"value":"New_unit_installed","label":"New Installation"},{"value":"Repair","label":"Repair"}],"variant":"card","inline":true},
       
-    kitchenProjectType: {"type":"select","label":"Kitchen Project Focus","required":true,"options":[{"value":"Floor_plan","label":"Floor Plan Changes"},{"value":"Cabinets","label":"Cabinets"},{"value":"Appliances","label":"Appliances"},{"value":"Counter_tops_or_sinks","label":"Countertops/Sinks"},{"value":"Flooring","label":"Flooring"},{"value":"Complete_remodel","label":"Complete Remodel"}]},
+    kitchenProjectType: {"type":"select","label":"Kitchen Project Focus","required":true,"options":[{"value":"Floor_plan","label":"Floor Plan Changes"},{"value":"Cabinets","label":"Cabinets"},{"value":"Appliances","label":"Appliances"},{"value":"Counter_tops_or_sinks","label":"Countertops/Sinks"},{"value":"Flooring","label":"Flooring"}]},
       
-    bathroomProjectType: {"type":"select","label":"Bathroom Project Focus","required":true,"options":[{"value":"Bath_sinks","label":"Sink/Vanity"},{"value":"Shower","label":"Shower"},{"value":"Bathtub","label":"Bathtub"},{"value":"Toilet","label":"Toilet"},{"value":"Tile","label":"Tile Work"},{"value":"Full_bathroom","label":"Complete Remodel"}]}
+    bathroomProjectType: {"type":"select","label":"Bathroom Project Focus","required":true,"options":[{"value":"Bath_sinks","label":"Sink/Vanity"},{"value":"Full_bathroom","label":"Complete Remodel"},{"value":"Tile","label":"Tile Work"}]}
       
   };
   
