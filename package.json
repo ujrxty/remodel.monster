@@ -1,0 +1,38 @@
+{
+  "name": "home improvement online-offer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "next lint",
+    "shadcn": "npx shadcn@latest add",
+    "theme:install": "npx shadcn@latest add"
+  },
+  "dependencies": {
+    "@radix-ui/react-progress": "^1.1.4",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "latest",
+    "next": "canary",
+    "react": "canary",
+    "react-dom": "canary",
+    "react-hot-toast": "latest",
+    "react-icons": "latest",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "canary",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "latest"
+  }
+}

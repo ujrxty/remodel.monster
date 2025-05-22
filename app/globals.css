@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Global CSS with design tokens from configuration: home improvement online
+ */
+
+/**
+ * Theme CSS Variables
+ */
+:root {
+  /* Light theme variables */
+  --background: 0 0% 100%;    /* white */
+  --foreground: 222 47% 11%;   /* very dark gray */
+  --card: 0 0% 100%;    /* white */
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 46 100% 55%;     /* orange/yellow */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 48 4% 85%;     /* light gray */
+  --secondary-foreground: 222 47% 11%;
+  --muted: 0 0% 96%;          /* very light gray */
+  --muted-foreground: 215 20% 65%;
+  --accent: 48 2% 80%;        /* light gray accent */
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;   /* red */
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 46 100% 55%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark theme variables */
+  --background: 0 0% 3.9%;    /* very dark gray */
+  --foreground: 0 0% 98%;     /* white */
+  --card: 0 0% 10%;           /* dark gray */
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 46 91% 55%;      /* orange/yellow */
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 15%;      /* dark gray */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 15%;          /* dark gray */
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 48 5% 35%;        /* dark gray accent */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;   /* dark red */
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 46 91% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Keyframe animations */
+@keyframes form-glow {
+  0% { box-shadow: 0 0 30px hsl(var(--primary) / 0.15); }
+  25% { box-shadow: 0 0 40px hsl(var(--primary) / 0.2); }
+  50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.15); }
+  75% { box-shadow: 0 0 40px hsl(var(--primary) / 0.25); }
+  100% { box-shadow: 0 0 30px hsl(var(--primary) / 0.15); }
+}
+
+@keyframes border-glow {
+  0% { border-color: hsl(var(--border) / 0.2); }
+  50% { border-color: hsl(var(--border) / 0.5); }
+  100% { border-color: hsl(var(--border) / 0.2); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom components */
+@layer components {
+  .loader {
+    @apply border-4 border-muted border-t-primary rounded-full w-12 h-12;
+    animation: spin 1s linear infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary));
+}
