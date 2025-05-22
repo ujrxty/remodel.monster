@@ -18,6 +18,11 @@ export const metadata = {
   
   keywords: ["Home Improvement","Online Services","Affordable","Nationwide","Quality"],
   
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
