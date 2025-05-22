@@ -82,14 +82,15 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
           backgroundPosition: "center center"
         }}
       ></div>
-      {/* Theme color overlay */}
-      <div className="absolute inset-0 bg-primary/30 dark:bg-primary/40"></div>
+      {/* Theme color overlay - lighter in light mode, darker in dark mode for better text contrast */}
+      <div className="absolute inset-0 bg-white/40 dark:bg-black/60"></div>
       <div className="relative max-w-[1100px] mx-auto px-4 md:px-6 py-2 md:py-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center text-foreground"
+          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}
         >
           {!hideButtons && (
             <>
@@ -114,7 +115,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="bg-card text-card-foreground rounded-2xl p-3 md:p-5 max-w-md mx-auto shadow-lg border-2 border-border"
+            className="form-inverted form-card rounded-2xl p-3 md:p-5 max-w-md mx-auto shadow-lg border-2"
             style={{ 
               animation: mounted ? "form-glow 5s infinite, border-glow 3s infinite" : "none",
               transform: "translateZ(0)", 

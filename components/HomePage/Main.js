@@ -45,14 +45,17 @@ const PainSection = () => (
   </section>
 );
 
-const UrgencySection = () => (
+const UrgencySection = ({ onGetStarted }) => (
   <section className="py-12 bg-primary text-primary-foreground">
     <div className="max-w-4xl mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Don't Miss Out!</h2>
       <p className="text-xl mb-8">
         Take advantage of our limited-time offer for new customers. Transform your home with our quality services at discounted rates.
       </p>
-      <button className="px-8 py-3 bg-background text-foreground hover:bg-muted rounded-lg font-bold text-lg transition-colors">
+      <button 
+        onClick={onGetStarted}
+        className="px-8 py-3 bg-background text-foreground hover:bg-muted rounded-lg font-bold text-lg transition-colors"
+      >
         Get Started Now!
       </button>
     </div>
@@ -375,6 +378,10 @@ export default function Main() {
     }
   };
 
+  const handleGetStarted = () => {
+    router.push('/?step=2');
+  };
+
   return (
     <div className="min-h-screen">
       <Hero 
@@ -518,7 +525,7 @@ export default function Main() {
       
       <PainSection />
       <BenefitsList />
-      <UrgencySection />
+      <UrgencySection onGetStarted={handleGetStarted} />
       <Footer />
     </div>
   );
