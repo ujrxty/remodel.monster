@@ -90,7 +90,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center text-foreground"
-          style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.7)' }}
+          style={{ textShadow: 'var(--text-shadow, none)' }}
         >
           {!hideButtons && (
             <>
@@ -115,7 +115,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="form-inverted form-card rounded-2xl p-3 md:p-5 max-w-md mx-auto shadow-lg border-2"
+            className="bg-card text-card-foreground rounded-2xl p-3 md:p-5 max-w-md mx-auto shadow-lg border-2 border-border"
             style={{ 
               animation: mounted ? "form-glow 5s infinite, border-glow 3s infinite" : "none",
               transform: "translateZ(0)", 

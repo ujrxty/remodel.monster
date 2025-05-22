@@ -196,7 +196,21 @@ export default function Main() {
 
   // Load stored values on component mount
   useEffect(() => {
-    const fieldsToLoad = Object.keys(formData);
+    const fieldsToLoad = [
+      'firstName', 'lastName', 'email', 'phoneNumber', 'address', 'city', 'state', 'zip',
+      'jobType', 'purchaseTimeFrame', 'ownHome', 'creditRating', 'tcpa', 'tcpaLanguage',
+      'addition_type', 'bathroomProjectType', 'cabinetsProjectType', 'carryWeight',
+      'deckMaterial', 'doorProjectType', 'doorsMaterial', 'electricalProjectType',
+      'electricalServiceType', 'fenceType', 'flooringInquiyType', 'flooringType',
+      'garageDoorsProjectType', 'homeSecurityBuildingType', 'hvacAirType', 'hvacProjectType',
+      'hvacSystemType', 'insulationServiceType', 'kitchenProjectType', 'landscapingProjectType',
+      'landscapingServiceType', 'numStairs', 'numberOfDoors', 'numberOfWindows', 'openers',
+      'paintingProjectType', 'pestControlProjectType', 'plumbingProjectType', 'plumbingServiceType',
+      'poolType', 'preHung', 'protection', 'remodelingLocationInHome', 'remodelingProjectType',
+      'roofProjectType', 'roofingType', 'sidingProjectType', 'sidingType', 'stairLiftProjectType',
+      'stairLiftStairType', 'sunroomLength', 'sunroomNumRooms', 'sunroomWidth',
+      'swimmingPoolProjectType', 'swimmingPoolServiceType', 'treesProjectType', 'windowsProjectType'
+    ];
     const loadedData = {};
     
     fieldsToLoad.forEach(field => {

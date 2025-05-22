@@ -141,6 +141,7 @@ export default function SelectField({
             aria-expanded={isOpen}
             aria-haspopup="listbox"
             aria-labelledby={id}
+            aria-controls={`${id}-listbox`}
           >
             <span className={!value ? 'text-muted-foreground' : ''}>
               {displayValue || placeholder}
@@ -158,7 +159,11 @@ export default function SelectField({
           </div>
           
           {isOpen && (
-            <div className="absolute z-10 w-full mt-1 bg-background border border-border rounded-md shadow-lg max-h-60 overflow-auto">
+            <div 
+              id={`${id}-listbox`}
+              className="absolute z-10 w-full mt-1 bg-background border border-border rounded-md shadow-lg max-h-60 overflow-auto"
+              role="listbox"
+            >
               {searchable && (
                 <div className="p-2 border-b border-border">
                   <input

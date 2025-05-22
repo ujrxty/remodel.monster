@@ -248,58 +248,11 @@
   }
 }
 
-/* Inverted theme for form - opposite of main theme */
+/* Hero text shadow only in dark mode */
 :root {
-  /* When site is light, form is dark */
-  --form-background: oklch(0.27 0.01 57.65);
-  --form-foreground: oklch(0.92 0.02 83.06);
-  --form-card: oklch(0.32 0.02 59.06);
-  --form-card-foreground: oklch(0.92 0.02 83.06);
-  --form-border: oklch(0.38 0.02 57.13);
-  --form-input: oklch(0.38 0.02 57.13);
-  --form-muted: oklch(0.32 0.02 59.06);
-  --form-muted-foreground: oklch(0.80 0.02 82.11);
-  --form-primary: oklch(0.73 0.06 66.70);
-  --form-primary-foreground: oklch(0.27 0.01 57.65);
+  --text-shadow: none;
 }
 
 .dark {
-  /* When site is dark, form is light */
-  --form-background: oklch(0.96 0.02 90.24);
-  --form-foreground: oklch(0.38 0.02 64.34);
-  --form-card: oklch(0.99 0.01 87.47);
-  --form-card-foreground: oklch(0.38 0.02 64.34);
-  --form-border: oklch(0.86 0.03 84.59);
-  --form-input: oklch(0.86 0.03 84.59);
-  --form-muted: oklch(0.92 0.02 83.06);
-  --form-muted-foreground: oklch(0.54 0.04 71.17);
-  --form-primary: oklch(0.62 0.08 65.54);
-  --form-primary-foreground: oklch(1.00 0 0);
-}
-
-/* Form theme class */
-.form-inverted {
-  background: var(--form-background);
-  color: var(--form-foreground);
-  border-color: var(--form-border);
-}
-
-.form-inverted input,
-.form-inverted select,
-.form-inverted textarea {
-  background: var(--form-input);
-  color: var(--form-foreground);
-  border-color: var(--form-border);
-}
-
-.form-inverted .form-card {
-  background: var(--form-card);
-  color: var(--form-card-foreground);
-  border-color: var(--form-border);
-}
-
-.form-inverted button[type="submit"],
-.form-inverted .btn-primary {
-  background: var(--form-primary);
-  color: var(--form-primary-foreground);
+  --text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
