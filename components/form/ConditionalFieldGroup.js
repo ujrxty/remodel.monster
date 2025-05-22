@@ -243,6 +243,546 @@ export default function ConditionalFieldGroup({
       }
     }
     
+    // Single-field job types (quick implementation)
+    
+    // Additions
+    if (jobType === 'additions') {
+      if (!fieldDefinitions.addition_type) {
+        tempFields.addition_type = {
+          type: 'select',
+          label: 'Type of Addition',
+          required: true,
+          options: [
+            { value: 'Ground_floor', label: 'Ground Floor' },
+            { value: 'Second_floor', label: 'Second Floor' },
+            { value: 'Other', label: 'Other' }
+          ]
+        };
+      }
+    }
+    
+    // Cabinets  
+    if (jobType === 'cabinets') {
+      if (!fieldDefinitions.cabinetsProjectType) {
+        tempFields.cabinetsProjectType = {
+          type: 'select',
+          label: 'Cabinet Project Type',
+          required: true,
+          options: [
+            { value: 'Install_new_custom_cabinets', label: 'Custom Cabinet Installation' },
+            { value: 'Install_new_pre-made_cabinets', label: 'Pre-made Cabinet Installation' },
+            { value: 'Repair_existing_cabinets', label: 'Repair Existing Cabinets' },
+            { value: 'Reface_existing_cabinets', label: 'Reface Existing Cabinets' }
+          ]
+        };
+      }
+    }
+    
+    // Deck
+    if (jobType === 'deck') {
+      if (!fieldDefinitions.deckMaterial) {
+        tempFields.deckMaterial = {
+          type: 'radio',
+          label: 'Deck Material',
+          required: true,
+          options: [
+            { value: 'Composite', label: 'Composite' },
+            { value: 'Wood', label: 'Wood' },
+            { value: 'Other', label: 'Other' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+    }
+    
+    // Fencing
+    if (jobType === 'fencing') {
+      if (!fieldDefinitions.fenceType) {
+        tempFields.fenceType = {
+          type: 'select',
+          label: 'Fence Type',
+          required: true,
+          options: [
+            { value: 'Wood', label: 'Wood' },
+            { value: 'Metal', label: 'Metal' },
+            { value: 'Composite', label: 'Composite' },
+            { value: 'Electric', label: 'Electric' },
+            { value: 'Other', label: 'Other' }
+          ]
+        };
+      }
+    }
+    
+    // Gutters
+    if (jobType === 'gutters') {
+      if (!fieldDefinitions.protection) {
+        tempFields.protection = {
+          type: 'radio',
+          label: 'Gutter Protection Needed?',
+          required: true,
+          options: [
+            { value: 'YES', label: 'Yes' },
+            { value: 'NO', label: 'No' }
+          ],
+          inline: true
+        };
+      }
+    }
+    
+    // Home Security
+    if (jobType === 'home_security') {
+      if (!fieldDefinitions.homeSecurityBuildingType) {
+        tempFields.homeSecurityBuildingType = {
+          type: 'select',
+          label: 'Building Type',
+          required: true,
+          options: [
+            { value: 'House', label: 'House' },
+            { value: 'Condo_unit_or_apartment', label: 'Condo/Apartment' },
+            { value: 'Office', label: 'Office' },
+            { value: 'Large_building', label: 'Large Building' },
+            { value: 'Other', label: 'Other' }
+          ]
+        };
+      }
+    }
+    
+    // Insulation
+    if (jobType === 'insulation') {
+      if (!fieldDefinitions.insulationServiceType) {
+        tempFields.insulationServiceType = {
+          type: 'radio',
+          label: 'Insulation Type',
+          required: true,
+          options: [
+            { value: 'Blown_in', label: 'Blown-in' },
+            { value: 'Spray_foam', label: 'Spray Foam' },
+            { value: 'Batten', label: 'Batten' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+    }
+    
+    // Painting
+    if (jobType === 'painting') {
+      if (!fieldDefinitions.paintingProjectType) {
+        tempFields.paintingProjectType = {
+          type: 'select',
+          label: 'Painting Project Type',
+          required: true,
+          options: [
+            { value: 'Exterior_Painting', label: 'Exterior Painting' },
+            { value: 'Interior_Painting', label: 'Interior Painting' },
+            { value: 'Specialty_Painting_Faux_Finishes', label: 'Specialty - Faux Finishes' },
+            { value: 'Specialty_Painting_Textures', label: 'Specialty - Textures' },
+            { value: 'Other', label: 'Other' }
+          ]
+        };
+      }
+    }
+    
+    // Pest Control
+    if (jobType === 'pest_control') {
+      if (!fieldDefinitions.pestControlProjectType) {
+        tempFields.pestControlProjectType = {
+          type: 'select',
+          label: 'Pest Control Type',
+          required: true,
+          options: [
+            { value: 'Ant_Control', label: 'Ant Control' },
+            { value: 'Bee_Removal', label: 'Bee Removal' },
+            { value: 'Small_animals', label: 'Small Animals' },
+            { value: 'Termites', label: 'Termites' }
+          ]
+        };
+      }
+    }
+    
+    // Trees
+    if (jobType === 'trees') {
+      if (!fieldDefinitions.treesProjectType) {
+        tempFields.treesProjectType = {
+          type: 'radio',
+          label: 'Tree Service Type',
+          required: true,
+          options: [
+            { value: 'Trees', label: 'Tree Work' },
+            { value: 'Shrubs', label: 'Shrub Work' },
+            { value: 'Stump_removal', label: 'Stump Removal' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+    }
+    
+    // Multi-field job types (medium complexity)
+    
+    // Flooring (2 fields)
+    if (jobType === 'flooring') {
+      if (!fieldDefinitions.flooringInquiyType) {
+        tempFields.flooringInquiyType = {
+          type: 'radio',
+          label: 'Project Type',
+          required: true,
+          options: [
+            { value: 'Installation', label: 'New Installation' },
+            { value: 'Repair', label: 'Repair Work' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.flooringType) {
+        tempFields.flooringType = {
+          type: 'select',
+          label: 'Flooring Type',
+          required: true,
+          options: [
+            { value: 'Hardwood', label: 'Hardwood' },
+            { value: 'Vinyl', label: 'Vinyl' },
+            { value: 'Carpet', label: 'Carpet' },
+            { value: 'Tile', label: 'Tile' },
+            { value: 'Composite', label: 'Composite' }
+          ]
+        };
+      }
+    }
+    
+    // Garage Doors (3 fields)
+    if (jobType === 'garage_doors') {
+      if (!fieldDefinitions.garageDoorsProjectType) {
+        tempFields.garageDoorsProjectType = {
+          type: 'radio',
+          label: 'Project Type',
+          required: true,
+          options: [
+            { value: 'New_Construction', label: 'New Construction' },
+            { value: 'Replacement', label: 'Replacement' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.numberOfDoors) {
+        tempFields.numberOfDoors = {
+          type: 'number',
+          label: 'Number of Doors',
+          required: true,
+          validation: {
+            min: 1,
+            max: 10,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid number'
+          },
+          helpText: 'How many garage doors?'
+        };
+      }
+      
+      if (!fieldDefinitions.openers) {
+        tempFields.openers = {
+          type: 'radio',
+          label: 'Include Openers?',
+          required: true,
+          options: [
+            { value: 'YES', label: 'Yes' },
+            { value: 'NO', label: 'No' }
+          ],
+          inline: true
+        };
+      }
+    }
+    
+    // Landscaping (2 fields)
+    if (jobType === 'landscaping') {
+      if (!fieldDefinitions.landscapingProjectType) {
+        tempFields.landscapingProjectType = {
+          type: 'radio',
+          label: 'Service Category',
+          required: true,
+          options: [
+            { value: 'Landscaping', label: 'Landscaping' },
+            { value: 'Lawn_Care', label: 'Lawn Care' },
+            { value: 'Sprinklers', label: 'Sprinkler Systems' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.landscapingServiceType) {
+        tempFields.landscapingServiceType = {
+          type: 'radio',
+          label: 'Area Focus',
+          required: true,
+          options: [
+            { value: 'Front_Yard', label: 'Front Yard' },
+            { value: 'Back_Yard', label: 'Back Yard' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+    }
+    
+    // Remodeling (2 fields)
+    if (jobType === 'remodeling') {
+      if (!fieldDefinitions.remodelingLocationInHome) {
+        tempFields.remodelingLocationInHome = {
+          type: 'radio',
+          label: 'Room Location',
+          required: true,
+          options: [
+            { value: 'Bathroom', label: 'Bathroom' },
+            { value: 'Basement', label: 'Basement' },
+            { value: 'Kitchen', label: 'Kitchen' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.remodelingProjectType) {
+        tempFields.remodelingProjectType = {
+          type: 'radio',
+          label: 'Project Scope',
+          required: true,
+          options: [
+            { value: 'Multiple_Rooms', label: 'Multiple Rooms' },
+            { value: 'Single_Room', label: 'Single Room' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+    }
+    
+    // Roof (2 fields)
+    if (jobType === 'roof') {
+      if (!fieldDefinitions.roofProjectType) {
+        tempFields.roofProjectType = {
+          type: 'select',
+          label: 'Roof Project Type',
+          required: true,
+          options: [
+            { value: 'New_roof_for_new_home', label: 'New Roof - New Home' },
+            { value: 'New_roof_for_an_existing_home', label: 'New Roof - Existing Home' },
+            { value: 'Repair', label: 'Repair' },
+            { value: 'Shingle_over_existing_roof', label: 'Shingle Over Existing' }
+          ]
+        };
+      }
+      
+      if (!fieldDefinitions.roofingType) {
+        tempFields.roofingType = {
+          type: 'select',
+          label: 'Roofing Material',
+          required: true,
+          options: [
+            { value: 'Asphalt_shingle', label: 'Asphalt Shingle' },
+            { value: 'Cedar_shake', label: 'Cedar Shake' },
+            { value: 'Metal', label: 'Metal' },
+            { value: 'Tar', label: 'Tar' },
+            { value: 'Tile', label: 'Tile' },
+            { value: 'Natural_state', label: 'Natural Slate' }
+          ]
+        };
+      }
+    }
+    
+    // Siding (2 fields)
+    if (jobType === 'siding') {
+      if (!fieldDefinitions.sidingProjectType) {
+        tempFields.sidingProjectType = {
+          type: 'radio',
+          label: 'Project Type',
+          required: true,
+          options: [
+            { value: 'Replace_siding', label: 'Replace Siding' },
+            { value: 'Siding_repair', label: 'Siding Repair' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.sidingType) {
+        tempFields.sidingType = {
+          type: 'select',
+          label: 'Siding Material',
+          required: true,
+          options: [
+            { value: 'Vinyl', label: 'Vinyl' },
+            { value: 'Wood', label: 'Wood' },
+            { value: 'Metal', label: 'Metal' },
+            { value: 'Stucco', label: 'Stucco' },
+            { value: 'Brick_or_stone', label: 'Brick or Stone' },
+            { value: 'Other', label: 'Other' }
+          ]
+        };
+      }
+    }
+    
+    // Swimming Pool (3 fields)
+    if (jobType === 'swimming_pool') {
+      if (!fieldDefinitions.swimmingPoolProjectType) {
+        tempFields.swimmingPoolProjectType = {
+          type: 'radio',
+          label: 'Installation Location',
+          required: true,
+          options: [
+            { value: 'Indoor', label: 'Indoor' },
+            { value: 'Outdoor', label: 'Outdoor' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.swimmingPoolServiceType) {
+        tempFields.swimmingPoolServiceType = {
+          type: 'radio',
+          label: 'Service Type',
+          required: true,
+          options: [
+            { value: 'Repair', label: 'Repair' },
+            { value: 'Install', label: 'New Installation' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.poolType) {
+        tempFields.poolType = {
+          type: 'select',
+          label: 'Pool Type',
+          required: true,
+          options: [
+            { value: 'Swimming_Pool', label: 'Swimming Pool' },
+            { value: 'Sauna', label: 'Sauna' },
+            { value: 'Hot_Tub', label: 'Hot Tub' }
+          ]
+        };
+      }
+    }
+    
+    // Specialized job types (complex implementations)
+    
+    // Stair Lift (4 fields - most complex)
+    if (jobType === 'stair_lift') {
+      if (!fieldDefinitions.stairLiftProjectType) {
+        tempFields.stairLiftProjectType = {
+          type: 'radio',
+          label: 'Installation Type',
+          required: true,
+          options: [
+            { value: 'Private', label: 'Private Residence' },
+            { value: 'Public', label: 'Public Building' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.stairLiftStairType) {
+        tempFields.stairLiftStairType = {
+          type: 'radio',
+          label: 'Stair Configuration',
+          required: true,
+          options: [
+            { value: 'Straight_staircase', label: 'Straight Staircase' },
+            { value: 'Curved_staircase', label: 'Curved Staircase' }
+          ],
+          variant: 'card',
+          inline: true
+        };
+      }
+      
+      if (!fieldDefinitions.numStairs) {
+        tempFields.numStairs = {
+          type: 'number',
+          label: 'Number of Stairs',
+          required: true,
+          validation: {
+            min: 1,
+            max: 300,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid number'
+          },
+          helpText: 'How many stairs need the lift?'
+        };
+      }
+      
+      if (!fieldDefinitions.carryWeight) {
+        tempFields.carryWeight = {
+          type: 'number',
+          label: 'Weight Capacity (lbs)',
+          required: true,
+          validation: {
+            min: 100,
+            max: 300,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid weight'
+          },
+          helpText: 'What weight capacity is needed?'
+        };
+      }
+    }
+    
+    // Sunrooms (3 numeric fields)
+    if (jobType === 'sunrooms') {
+      if (!fieldDefinitions.sunroomNumRooms) {
+        tempFields.sunroomNumRooms = {
+          type: 'number',
+          label: 'Number of Rooms',
+          required: true,
+          validation: {
+            min: 1,
+            max: 10,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid number'
+          },
+          helpText: 'How many sunrooms?'
+        };
+      }
+      
+      if (!fieldDefinitions.sunroomLength) {
+        tempFields.sunroomLength = {
+          type: 'number',
+          label: 'Length (feet)',
+          required: true,
+          validation: {
+            min: 1,
+            max: 300,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid length'
+          },
+          helpText: 'Length of the sunroom'
+        };
+      }
+      
+      if (!fieldDefinitions.sunroomWidth) {
+        tempFields.sunroomWidth = {
+          type: 'number',
+          label: 'Width (feet)',
+          required: true,
+          validation: {
+            min: 1,
+            max: 300,
+            pattern: '^[0-9]+$',
+            patternMessage: 'Please enter a valid width'
+          },
+          helpText: 'Width of the sunroom'
+        };
+      }
+    }
+    
     setJobSpecificFields(tempFields);
   }, [jobType, fieldDefinitions]);
   
