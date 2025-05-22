@@ -29,6 +29,10 @@ Next.js lead generation website for home improvement services. Collects user inf
 ✅ State management refactored  
 ✅ TCPA compliance implemented  
 ✅ Basic conditional logic functional  
+✅ API field conversion fixed - TCPA boolean to YES/NO format
+
+## Recent Fixes
+- **TCPA Field Conversion** - Fixed API rejection by converting boolean/string "true" to required "YES"/"NO" format in app/api/process/route.js:165
 
 ## Next Priority Tasks
 1. **Test conditional field rendering** - Ensure job-specific fields show/hide correctly

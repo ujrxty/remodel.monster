@@ -162,7 +162,7 @@ export async function POST(request) {
     
     
     // Default values for required fields
-    tcpa: formData.tcpa || "YES",
+    tcpa: formData.tcpa === "true" || formData.tcpa === true ? "YES" : "NO",
     tcpaLanguage: formData.tcpaLanguage || "By submitting this form, I agree to receive phone calls and text messages from this company and its partners.",
     
     // Pass through tracking parameters
