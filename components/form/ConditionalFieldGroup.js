@@ -62,11 +62,7 @@ export default function ConditionalFieldGroup({
           helpText: 'How many windows need to be replaced or repaired?'
         };
       }
-    }</thinking>
-
-<function_calls>
-<invoke name="TodoWrite">
-<parameter name="todos">[{"id": "p2-1", "content": "Fix Windows field option values to match API spec", "status": "completed", "priority": "high"}, {"id": "p2-2", "content": "Add complete Electrical conditional fields (2 fields)", "status": "in_progress", "priority": "high"}, {"id": "p2-3", "content": "Add complete Plumbing conditional fields (2 fields)", "status": "pending", "priority": "high"}, {"id": "p2-4", "content": "Complete Kitchen conditional fields implementation", "status": "pending", "priority": "medium"}, {"id": "p2-5", "content": "Complete Bathroom conditional fields implementation", "status": "pending", "priority": "medium"}, {"id": "p2-6", "content": "Complete Doors conditional fields (3 fields)", "status": "pending", "priority": "medium"}, {"id": "p2-7", "content": "Test all 6 major job types for API compliance", "status": "pending", "priority": "high"}]
+    }
     
     // Process door fields
     if (jobType === 'doors') {
