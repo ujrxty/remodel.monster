@@ -65,23 +65,52 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
   
   return (
     <div className="relative w-full">
-      {/* Background with overlay - use CSS background color as fallback */}
-      <div 
-        className="absolute inset-0 bg-primary/30 bg-cover bg-center hidden md:block" 
-        style={{ 
-          backgroundImage: "url('/uploads/hero-landscape.png')",
-          filter: "brightness(0.65) blur(1px)",
-          backgroundPosition: "center center"
-        }}
-      ></div>
-      <div 
-        className="absolute inset-0 bg-primary/30 bg-cover bg-center block md:hidden" 
-        style={{ 
-          backgroundImage: "url('/uploads/hero-portrait.png')",
-          filter: "brightness(0.65) blur(1px)",
-          backgroundPosition: "center center"
-        }}
-      ></div>
+      {/* Background with modern image loading */}
+      <picture className="absolute inset-0 hidden md:block">
+        <source 
+          media="(min-width: 1200px)" 
+          srcSet="/uploads/hero-landscape-1920.webp" 
+          type="image/webp"
+        />
+        <source 
+          media="(min-width: 768px)" 
+          srcSet="/uploads/hero-landscape-1024.webp" 
+          type="image/webp"
+        />
+        <source 
+          srcSet="/uploads/hero-landscape-640.webp" 
+          type="image/webp"
+        />
+        <img 
+          src="/uploads/hero-landscape.png" 
+          alt="Home improvement background" 
+          className="w-full h-full object-cover" 
+          style={{ filter: "brightness(0.65) blur(1px)" }}
+          fetchPriority="high"
+          width={1536}
+          height={1024}
+        />
+      </picture>
+      <picture className="absolute inset-0 block md:hidden">
+        <source 
+          media="(min-width: 640px)" 
+          srcSet="/uploads/hero-portrait-768.webp" 
+          type="image/webp"
+        />
+        <source 
+          srcSet="/uploads/hero-portrait-640.webp" 
+          type="image/webp"
+        />
+        <img 
+          src="/uploads/hero-portrait.png" 
+          alt="Home improvement background" 
+          className="w-full h-full object-cover" 
+          style={{ filter: "brightness(0.65) blur(1px)" }}
+          fetchPriority="high"
+          width={1024}
+          height={1536}
+        />
+      </picture>
       {/* Theme color overlay - lighter in light mode, darker in dark mode for better text contrast */}
       <div className="absolute inset-0 bg-white/40 dark:bg-black/60"></div>
       <div className="relative max-w-[1100px] mx-auto px-4 md:px-6 py-2 md:py-4">

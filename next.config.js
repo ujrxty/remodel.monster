@@ -14,6 +14,35 @@ const nextConfig = {
         hostname: 'localhost',
       },
     ],
+    formats: ['image/webp', 'image/avif'],
+  },
+  
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  
+  // Cache headers for static assets
+  async headers() {
+    return [
+      {
+        source: '/uploads/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
   
   env: {
@@ -35,11 +64,46 @@ const nextConfig = {
   transpilePackages: ['framer-motion'],
   
   // Configure webpack
-  webpack(config) {
+  webpack(config, { isServer, dev }) {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@': path.resolve(__dirname),
     };
+    
+    // Bundle optimizations for production
+    if (!dev && !isServer) {
+      // Remove unused polyfills
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        net: false,
+        tls: false,
+      };
+      
+      // Optimize chunks
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          vendor: {
+            name: 'vendor',
+            chunks: 'all',
+            test: /node_modules/,
+            priority: 20,
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 10,
+            reuseExistingChunk: true,
+            enforce: true,
+          },
+        },
+      };
+    }
+    
     return config;
   },
   

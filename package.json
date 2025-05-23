@@ -20,7 +20,6 @@
     "react": "canary",
     "react-dom": "canary",
     "react-hot-toast": "latest",
-    "react-icons": "latest",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7"
   },
