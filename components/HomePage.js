@@ -66,27 +66,27 @@ const UrgencySection = ({ onGetStarted }) => (
 );
 
 const Footer = () => (
-  <footer className="light py-10 bg-secondary text-secondary-foreground">
+  <footer className="py-10 bg-secondary text-black" data-theme="light">
     <div className="max-w-6xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="mb-6 md:mb-0">
-          <h3 className="font-bold text-xl mb-2">Remodel MONSTER</h3>
-          <p className="text-muted-foreground">© 2025 All Rights Reserved</p>
+          <h3 className="font-bold text-xl mb-2 text-black">Remodel MONSTER</h3>
+          <p className="text-black/60">© 2025 All Rights Reserved</p>
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div>
-            <h4 className="font-bold mb-4">Links</h4>
+            <h4 className="font-bold mb-4 text-black">Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-muted-foreground hover:text-secondary-foreground">Home</Link></li>
-              <li><Link href="/" className="text-muted-foreground hover:text-secondary-foreground">About</Link></li>
-              <li><Link href="/" className="text-muted-foreground hover:text-secondary-foreground">Contact</Link></li>
+              <li><Link href="/" className="text-black/60 hover:text-black">Home</Link></li>
+              <li><Link href="/" className="text-black/60 hover:text-black">About</Link></li>
+              <li><Link href="/" className="text-black/60 hover:text-black">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Legal</h4>
+            <h4 className="font-bold mb-4 text-black">Legal</h4>
             <ul className="space-y-2">
-              <li><Link href="/privacy" className="text-muted-foreground hover:text-secondary-foreground">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-muted-foreground hover:text-secondary-foreground">Terms of Service</Link></li>
+              <li><Link href="/privacy" className="text-black/60 hover:text-black">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-black/60 hover:text-black">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
