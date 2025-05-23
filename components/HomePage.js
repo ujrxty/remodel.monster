@@ -50,10 +50,10 @@ const UrgencySection = ({ onGetStarted }) => (
   <section className="py-12 bg-primary text-primary-foreground">
     <div className="max-w-4xl mx-auto px-4 text-center">
       <h2 className="text-3xl font-black mb-4" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-        Don't Miss Out!
+        Is Your House Giving You Nightmares?
       </h2>
       <p className="text-xl font-semibold mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
-        Take advantage of our limited-time offer for new customers. Transform your home with our quality services at discounted rates.
+        Remodel MONSTER devours home repairs for breakfast. We'll hunt down every leak, crack, and squeak – no project too scary!
       </p>
       <button 
         onClick={onGetStarted}
