@@ -133,8 +133,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="text-xl md:text-2xl mb-4 max-w-2xl mx-auto"
               >
-                Get top-quality, affordable, and convenient home improvements delivered online right at your fingertips.
-                <br />Answer one quick question to find out more.
+		Find Expert Remodel Pros for Windows, Roofing, Bathroom, and More 
               </motion.p>
             </>
           )}
