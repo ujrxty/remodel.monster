@@ -15,9 +15,12 @@ export const metadata = {
   keywords: ["Home Improvement","Online Services","Affordable","Nationwide","Quality"],
   
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: [
+      { url: '/monster-favicon.webp', type: 'image/webp' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    shortcut: '/monster-favicon.webp',
+    apple: '/monster-favicon.webp',
   },
 };
 
