@@ -17,6 +17,7 @@
     "clsx": "^2.0.0",
     "framer-motion": "latest",
     "next": "canary",
+    "next-mdx-remote": "^5.0.0",
     "react": "canary",
     "react-dom": "canary",
     "react-hot-toast": "latest",

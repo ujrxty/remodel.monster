@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { motion } from 'framer-motion';
 import toast from "react-hot-toast";
 
@@ -74,16 +75,16 @@ const Footer = () => (
           <div>
             <h4 className="font-bold mb-4">Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-secondary-foreground">Home</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-secondary-foreground">About</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-secondary-foreground">Contact</a></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-secondary-foreground">Home</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-secondary-foreground">About</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-secondary-foreground">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-secondary-foreground">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-secondary-foreground">Terms of Service</a></li>
+              <li><Link href="/privacy" className="text-muted-foreground hover:text-secondary-foreground">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="text-muted-foreground hover:text-secondary-foreground">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
