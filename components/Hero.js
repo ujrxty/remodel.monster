@@ -126,7 +126,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="inline-block bg-secondary text-secondary-foreground p-2 shadow-md border-2 border-border mb-4"
+              className="inline-block bg-secondary/90 text-secondary-foreground p-2 shadow-md border-2 border-border mb-4"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-2">
                 Find Expert Remodel Pros Near You! 
