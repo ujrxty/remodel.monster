@@ -101,7 +101,7 @@ import PersonalInfo from '../form/personalInfo';
 import Location from '../form/location';
 import Confirmation from '../form/confirmation';
 
-export default function Main() {
+export default function HomePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const step = parseInt(searchParams.get("step") || "1");

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import Main from "@/components/HomePage/Main";
+import HomePage from "@/components/HomePage";
 
 /**
  * Main page component for the offer
@@ -14,7 +14,7 @@ export default function Page() {
           <div className="animate-pulse text-xl font-semibold">Loading...</div>
         </div>
       }>
-        <Main />
+        <HomePage />
       </Suspense>
     </div>
   );
