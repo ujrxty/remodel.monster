@@ -53,7 +53,7 @@ const UrgencySection = ({ onGetStarted }) => (
         Is Your House Giving You Nightmares?
       </h2>
       <p className="text-xl font-semibold mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
-        Remodel MONSTER devours home repairs for breakfast. We'll hunt down every leak, crack, and squeak – no project too scary!
+        Remodel MONSTER devours home repairs for breakfast. No project too scary!
       </p>
       <button 
         onClick={onGetStarted}
