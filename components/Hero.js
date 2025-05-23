@@ -122,20 +122,19 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
           style={{ textShadow: 'var(--text-shadow, none)' }}
         >
           {!hideButtons && (
-            <>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="inline-block bg-secondary text-secondary-foreground p-2 shadow-md border-2 border-border mb-4"
+            >
+              <h1 className="text-4xl md:text-5xl font-bold mb-2">
                 Find Expert Remodel Pros Near You! 
               </h1>
-              
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-xl md:text-2xl mb-4 max-w-2xl mx-auto"
-              >
-		Windows, Roofing, Bathroom, and More 
-              </motion.p>
-            </>
+              <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+                Windows, Roofing, Bathroom, and More 
+              </p>
+            </motion.div>
           )}
           
           {/* Question as CTA */}
@@ -143,9 +142,9 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="bg-card text-card-foreground rounded-2xl p-3 md:p-5 max-w-md mx-auto shadow-lg border-2 border-border"
+            className="bg-card text-card-foreground p-3 md:p-5 max-w-md mx-auto shadow-md border-2 border-border"
             style={{ 
-              animation: mounted ? "form-glow 5s infinite, border-glow 3s infinite" : "none",
+              // animation: mounted ? "form-glow 5s infinite, border-glow 3s infinite" : "none",
               transform: "translateZ(0)", 
               backfaceVisibility: "hidden" 
             }}

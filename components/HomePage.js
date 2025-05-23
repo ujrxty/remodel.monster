@@ -32,7 +32,7 @@ const PainSection = () => (
         ].map((item, index) => (
           <motion.div 
             key={index} 
-            className="p-6 border border-border rounded-lg shadow-sm hover:shadow-md transition-all bg-background"
+            className="p-6 border-2 border-border shadow-md hover:shadow-lg transition-all bg-background hover:-translate-y-0.5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -49,13 +49,15 @@ const PainSection = () => (
 const UrgencySection = ({ onGetStarted }) => (
   <section className="py-12 bg-primary text-primary-foreground">
     <div className="max-w-4xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Don't Miss Out!</h2>
-      <p className="text-xl mb-8">
+      <h2 className="text-3xl font-black mb-4" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+        Don't Miss Out!
+      </h2>
+      <p className="text-xl font-semibold mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
         Take advantage of our limited-time offer for new customers. Transform your home with our quality services at discounted rates.
       </p>
       <button 
         onClick={onGetStarted}
-        className="px-8 py-3 bg-background text-foreground hover:bg-muted rounded-lg font-bold text-lg transition-colors"
+        className="px-8 py-3 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 border-2 border-border"
       >
         Get Started Now!
       </button>
