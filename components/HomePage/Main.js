@@ -67,7 +67,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="mb-6 md:mb-0">
-          <h3 className="font-bold text-xl mb-2">home improvement online</h3>
+          <h3 className="font-bold text-xl mb-2">Remodel MONSTER</h3>
           <p className="text-muted-foreground">© 2025 All Rights Reserved</p>
         </div>
         <div className="grid grid-cols-2 gap-8">

@@ -124,7 +124,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
           {!hideButtons && (
             <>
               <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                Ready to Transform Your Home?
+                Find Expert Remodel Pros Near You! 
               </h1>
               
               <motion.p 
@@ -133,7 +133,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="text-xl md:text-2xl mb-4 max-w-2xl mx-auto"
               >
-		Find Expert Remodel Pros for Windows, Roofing, Bathroom, and More 
+		Windows, Roofing, Bathroom, and More 
               </motion.p>
             </>
           )}

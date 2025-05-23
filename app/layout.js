@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
-  title: "Premium Home Improvement Services Online | Nationwide",
+  title: "Remodel MONSTER",
   description: "Get affordable and top-quality home improvement services online. Available nationwide, we offer solutions to transform your home and add value.",
   
   keywords: ["Home Improvement","Online Services","Affordable","Nationwide","Quality"],
