@@ -126,17 +126,14 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
-              className="inline-block relative shadow-md border-2 border-border mb-4"
+              className="inline-block bg-secondary text-secondary-foreground p-4 shadow-md border-2 border-border mb-4"
             >
-              <div className="absolute inset-0 bg-secondary opacity-90"></div>
-              <div className="relative text-secondary-foreground p-2">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">
-                  Find Expert Remodel Pros Near You! 
-                </h1>
-                <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-                  Windows, Roofing, Bathroom, and More 
-                </p>
-              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                Find Expert Remodel Pros Near You! 
+              </h1>
+              <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+                Windows, Roofing, Bathroom, and More 
+              </p>
             </motion.div>
           )}
           
