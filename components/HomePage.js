@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import toast from "react-hot-toast";
 
 // Components
-import Hero from '../Hero';
-import BenefitsList from '../BenefitsList';
+import Hero from './Hero';
+import BenefitsList from './BenefitsList';
 
 const PainSection = () => (
   <section className="py-12 bg-card">
@@ -94,12 +94,12 @@ const Footer = () => (
 );
 
 // Form Step Components
-import Intro from '../form/intro';
-import JobDetails from '../form/jobDetails';
-import SpecificDetails from '../form/specificDetails';
-import PersonalInfo from '../form/personalInfo';
-import Location from '../form/location';
-import Confirmation from '../form/confirmation';
+import Intro from './form/intro';
+import JobDetails from './form/jobDetails';
+import SpecificDetails from './form/specificDetails';
+import PersonalInfo from './form/personalInfo';
+import Location from './form/location';
+import Confirmation from './form/confirmation';
 
 export default function HomePage() {
   const router = useRouter();
