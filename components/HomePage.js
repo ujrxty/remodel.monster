@@ -66,7 +66,7 @@ const UrgencySection = ({ onGetStarted }) => (
 );
 
 const Footer = () => (
-  <footer className="py-10 bg-secondary text-secondary-foreground">
+  <footer className="light py-10 bg-secondary text-secondary-foreground">
     <div className="max-w-6xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="mb-6 md:mb-0">
