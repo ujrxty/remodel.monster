@@ -4,13 +4,8 @@
  */
 import "./globals.css";
 import "./prose.css";
-import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, ModeToggle } from "@/components/theme-provider";
-
-// Load fonts from configuration
-
-const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata = {
@@ -64,7 +59,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={inter ? inter.className : ""} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <ThemeProvider defaultTheme="light">
           <Toaster position="top-center" />
           {children}

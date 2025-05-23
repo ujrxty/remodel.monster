@@ -14,9 +14,9 @@
   }
   .theme {
 
-    --font-sans: DM Sans, sans-serif;
+    --font-sans: "DM Sans", sans-serif;
 
-    --font-mono: Space Mono, monospace;
+    --font-mono: "Space Mono", monospace;
 
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
@@ -100,11 +100,11 @@
 
     --sidebar-ring: oklch(0.6489 0.2370 26.9728);
 
-    --font-sans: DM Sans, sans-serif;
+    --font-sans: "DM Sans", sans-serif;
 
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-    --font-mono: Space Mono, monospace;
+    --font-mono: "Space Mono", monospace;
 
     --shadow-color: hsl(0 0% 0%);
 
@@ -208,11 +208,11 @@
 
     --sidebar-ring: oklch(0.7044 0.1872 23.1858);
 
-    --font-sans: DM Sans, sans-serif;
+    --font-sans: "DM Sans", sans-serif;
 
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-    --font-mono: Space Mono, monospace;
+    --font-mono: "Space Mono", monospace;
 
     --shadow-color: hsl(0 0% 0%);
 

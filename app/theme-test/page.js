@@ -23,8 +23,24 @@ export default function ThemeTest() {
           <div>--shadow-sm: {getComputedStyle(document.documentElement).getPropertyValue('--shadow-sm')}</div>
           <div>--shadow-md: {getComputedStyle(document.documentElement).getPropertyValue('--shadow-md')}</div>
           <div>--primary: {getComputedStyle(document.documentElement).getPropertyValue('--primary')}</div>
+          <div>--font-sans: {getComputedStyle(document.documentElement).getPropertyValue('--font-sans')}</div>
+          <div>--font-mono: {getComputedStyle(document.documentElement).getPropertyValue('--font-mono')}</div>
+          <div>body font-family: {getComputedStyle(document.body).fontFamily}</div>
         </div>
       )}
+
+      {/* Font Tests */}
+      <div className="space-y-4">
+        <h2 className="text-2xl font-semibold">Font Tests</h2>
+        <div className="space-y-2">
+          <p className="font-sans text-lg">Default (font-sans): The quick brown fox jumps over the lazy dog</p>
+          <p className="font-mono text-lg">Monospace (font-mono): The quick brown fox jumps over the lazy dog</p>
+          <p className="font-serif text-lg">Serif (font-serif): The quick brown fox jumps over the lazy dog</p>
+          <p className="text-lg" style={{fontFamily: 'DM Sans, sans-serif'}}>Direct DM Sans: The quick brown fox jumps over the lazy dog</p>
+          <p className="text-lg" style={{fontFamily: 'Space Mono, monospace'}}>Direct Space Mono: The quick brown fox jumps over the lazy dog</p>
+          <p className="text-lg" style={{fontFamily: 'var(--font-sans)'}}>Using CSS var: The quick brown fox jumps over the lazy dog</p>
+        </div>
+      </div>
 
       {/* TweakCN Style Card */}
       <div className="space-y-4">
