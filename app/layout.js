@@ -3,6 +3,7 @@
  * Generated from configuration: home improvement online
  */
 import "./globals.css";
+import "./prose.css";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, ModeToggle } from "@/components/theme-provider";
