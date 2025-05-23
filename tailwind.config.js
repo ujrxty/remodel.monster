@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
+        serif: ["var(--font-serif)", "serif"],
+      },
       colors: {
         border: "var(--border)",
         input: "var(--input)",
