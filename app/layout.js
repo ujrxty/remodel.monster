@@ -6,6 +6,7 @@ import "./globals.css";
 import "./prose.css";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, ModeToggle } from "@/components/theme-provider";
+import MonsterPeekaboo from "@/components/MonsterPeekaboo";
 
 
 export const metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
           <Toaster position="top-center" />
           {children}
           <ModeToggle />
+          <MonsterPeekaboo />
         </ThemeProvider>
       </body>
     </html>
