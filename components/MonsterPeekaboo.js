@@ -52,8 +52,8 @@ export default function MonsterPeekaboo() {
       transition: isVisible ? 'top 2s ease-out, bottom 2s ease-out, left 2s ease-out, right 2s ease-out' : 'top 0.3s ease-in, bottom 0.3s ease-in, left 0.3s ease-in, right 0.3s ease-in',
     };
 
-    // How much of the monster to show when peeking (100px = less than half)
-    const peekAmount = 100;
+    // How much of the monster to show when peeking (170px = about 2/3)
+    const peekAmount = 170;
     const hidePosition = -256; // Fully off screen
     const peekPosition = hidePosition + peekAmount; // Partially on screen
 
