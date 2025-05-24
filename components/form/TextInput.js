@@ -25,7 +25,30 @@ export default function TextInput({
   const id = `field-${name}`;
   
   const handleChange = (e) => {
-    onChange(name, e.target.value);
+    let newValue = e.target.value;
+    
+    // Apply phone number masking
+    if (type === 'tel' || name === 'phoneNumber') {
+      newValue = formatPhoneNumber(newValue);
+    }
+    
+    onChange(name, newValue);
+  };
+  
+  // Phone number formatting function
+  const formatPhoneNumber = (value) => {
+    // Remove all non-digits
+    const digits = value.replace(/\D/g, '');
+    
+    // Apply formatting based on length
+    if (digits.length >= 6) {
+      return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6,10)}`;
+    } else if (digits.length >= 3) {
+      return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+    } else if (digits.length > 0) {
+      return `(${digits}`;
+    }
+    return digits;
   };
   
   const inputClasses = `

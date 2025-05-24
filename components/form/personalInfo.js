@@ -24,9 +24,14 @@ export default function PersonalInfo(props) {
     // Get field definition from our config
     const fieldDef = fieldDefinitions[fieldName];
     
+    // Build validation rules including required status
+    const validationRules = {
+      ...fieldDef?.validation,
+      required: fieldDef?.required || false
+    };
+    
     // Use provided error or validate against field definition
-    const validationError = error || (fieldDef?.validation ? 
-      validateField(fieldName, value, fieldDef.validation) : null);
+    const validationError = error || validateField(fieldName, value, validationRules);
     
     // Update local errors
     setLocalErrors(prev => ({

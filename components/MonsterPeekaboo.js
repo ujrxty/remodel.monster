@@ -59,39 +59,40 @@ export default function MonsterPeekaboo() {
       width: '256px',
       height: '256px',
       cursor: 'pointer',
-      transition: isVisible ? 'transform 2s ease-out' : 'transform 0.3s ease-in',
-      transform: `rotate(${position.rotation}deg)`,
+      transition: isVisible ? 'all 2s ease-out' : 'all 0.3s ease-in',
       zIndex: 50,
     };
+
+    const peekAmount = 100; // pixels to show when peeking
 
     switch (position.edge) {
       case 'top':
         return {
           ...baseStyles,
-          top: isVisible ? '0' : '-256px',
+          top: isVisible ? `-${256 - peekAmount}px` : '-256px',
           left: `${position.offset}%`,
-          transform: `${baseStyles.transform} translateX(-50%)`,
+          transform: `translateX(-50%) rotate(${position.rotation}deg)`,
         };
       case 'bottom':
         return {
           ...baseStyles,
-          bottom: isVisible ? '0' : '-256px',
+          bottom: isVisible ? `-${256 - peekAmount}px` : '-256px',
           left: `${position.offset}%`,
-          transform: `${baseStyles.transform} translateX(-50%)`,
+          transform: `translateX(-50%) rotate(${position.rotation}deg)`,
         };
       case 'left':
         return {
           ...baseStyles,
-          left: isVisible ? '0' : '-256px',
+          left: isVisible ? `-${256 - peekAmount}px` : '-256px',
           top: `${position.offset}%`,
-          transform: `${baseStyles.transform} translateY(-50%)`,
+          transform: `translateY(-50%) rotate(${position.rotation}deg)`,
         };
       case 'right':
         return {
           ...baseStyles,
-          right: isVisible ? '0' : '-256px',
+          right: isVisible ? `-${256 - peekAmount}px` : '-256px',
           top: `${position.offset}%`,
-          transform: `${baseStyles.transform} translateY(-50%)`,
+          transform: `translateY(-50%) rotate(${position.rotation}deg)`,
         };
       default:
         return baseStyles;
