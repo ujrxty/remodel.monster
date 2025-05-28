@@ -244,7 +244,6 @@ export default function HomePage() {
       const trustedFormField = document.querySelector('input[name="xxTrustedFormCertUrl"]');
       if (trustedFormField && trustedFormField.value && !formData.xxTrustedFormCertUrl) {
         handleFieldChange('xxTrustedFormCertUrl', trustedFormField.value);
-        console.log('TrustedForm certificate captured:', trustedFormField.value);
       }
     };
 
@@ -425,6 +424,11 @@ export default function HomePage() {
     router.push('/?step=2');
   };
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    handleSubmit();
+  };
+
   return (
     <div className="min-h-screen">
       <Hero 
@@ -435,7 +439,7 @@ export default function HomePage() {
         hideButtons={step > 1}
       >
         {step >= 1 && (
-          <div className="mb-6">
+          <form onSubmit={handleFormSubmit} className="mb-6">
             {step === 1 && (
               <div className="space-y-4">
                 <Intro
@@ -451,7 +455,7 @@ export default function HomePage() {
                     Back
                   </button>
                   <button
-                    onClick={handleSubmit}
+                    type="submit"
                     className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
                     Continue
@@ -475,7 +479,7 @@ export default function HomePage() {
                     Back
                   </button>
                   <button
-                    onClick={handleSubmit}
+                    type="submit"
                     className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
                     Continue
@@ -499,7 +503,7 @@ export default function HomePage() {
                     Back
                   </button>
                   <button
-                    onClick={handleSubmit}
+                    type="submit"
                     className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
                     Continue
@@ -530,7 +534,7 @@ export default function HomePage() {
                     Back
                   </button>
                   <button
-                    onClick={handleSubmit}
+                    type="submit"
                     className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
                     Continue
@@ -554,7 +558,7 @@ export default function HomePage() {
                     Back
                   </button>
                   <button
-                    onClick={handleSubmit}
+                    type="submit"
                     className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
                     Submit
@@ -562,7 +566,7 @@ export default function HomePage() {
                 </div>
               </div>
             )}
-          </div>
+          </form>
         )}
       </Hero>
       
