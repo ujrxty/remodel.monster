@@ -125,6 +125,7 @@ export default function HomePage() {
     creditRating: "",
     tcpa: "",
     tcpaLanguage: "",
+    xxTrustedFormCertUrl: "",
     
     // Conditional fields for all job types
     addition_type: "",
@@ -201,7 +202,7 @@ export default function HomePage() {
   useEffect(() => {
     const fieldsToLoad = [
       'firstName', 'lastName', 'email', 'phoneNumber', 'address', 'city', 'state', 'zip',
-      'jobType', 'purchaseTimeFrame', 'ownHome', 'creditRating', 'tcpa', 'tcpaLanguage',
+      'jobType', 'purchaseTimeFrame', 'ownHome', 'creditRating', 'tcpa', 'tcpaLanguage', 'xxTrustedFormCertUrl',
       'addition_type', 'bathroomProjectType', 'cabinetsProjectType', 'carryWeight',
       'deckMaterial', 'doorProjectType', 'doorsMaterial', 'electricalProjectType',
       'electricalServiceType', 'fenceType', 'flooringInquiyType', 'flooringType',
@@ -236,6 +237,31 @@ export default function HomePage() {
       }
     });
   }, [formData]);
+
+  // Capture TrustedForm certificate URL when it's auto-populated
+  useEffect(() => {
+    const captureFormUrl = () => {
+      const trustedFormField = document.querySelector('input[name="xxTrustedFormCertUrl"]');
+      if (trustedFormField && trustedFormField.value && !formData.xxTrustedFormCertUrl) {
+        handleFieldChange('xxTrustedFormCertUrl', trustedFormField.value);
+        console.log('TrustedForm certificate captured:', trustedFormField.value);
+      }
+    };
+
+    // Check immediately and then set up polling
+    captureFormUrl();
+    const interval = setInterval(captureFormUrl, 1000);
+
+    // Cleanup interval after 30 seconds
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 30000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [formData.xxTrustedFormCertUrl, handleFieldChange]);
   
   // Track affiliate information
   useEffect(() => {

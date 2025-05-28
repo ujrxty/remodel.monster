@@ -165,6 +165,9 @@ export async function POST(request) {
     tcpa: formData.tcpa === "true" || formData.tcpa === true ? "YES" : "NO",
     tcpaLanguage: formData.tcpaLanguage || "By submitting this form, I agree to receive phone calls and text messages from this company and its partners.",
     
+    // TrustedForm certificate URL for lead verification
+    ...(formData.xxTrustedFormCertUrl ? { xxTrustedFormCertUrl: formData.xxTrustedFormCertUrl } : {}),
+    
     // Pass through tracking parameters
     ...(formData.transaction_id ? { clickid: formData.transaction_id } : {}),
     ...(formData.source ? { source: formData.source } : {}),

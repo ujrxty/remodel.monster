@@ -4,6 +4,7 @@
  */
 import "./globals.css";
 import "./prose.css";
+import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, ModeToggle } from "@/components/theme-provider";
 import MonsterPeekaboo from "@/components/MonsterPeekaboo";
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//leads-inst523-client.phonexa.com" />
+        <link rel="dns-prefetch" href="//api.trustedform.com" />
         {/* Preconnect for critical third-parties */}
         <link rel="preconnect" href="//fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="//leads-inst523-client.phonexa.com" />
@@ -70,6 +72,29 @@ export default function RootLayout({ children }) {
           <ModeToggle />
           <MonsterPeekaboo />
         </ThemeProvider>
+        
+        {/* TrustedForm Lead Certification */}
+        <Script
+          id="trustedform-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var tf = document.createElement('script');
+                tf.type = 'text/javascript';
+                tf.async = true;
+                tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+                  '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+                  new Date().getTime() + Math.random();
+                var s = document.getElementsByTagName('script')[0]; 
+                s.parentNode.insertBefore(tf, s);
+              })();
+            `,
+          }}
+        />
+        <noscript>
+          <img src='https://api.trustedform.com/ns.gif' alt='' />
+        </noscript>
       </body>
     </html>
   );

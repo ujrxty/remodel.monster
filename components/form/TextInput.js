@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { formatPhone, unformatPhone } from '@/lib/utils';
 
 /**
  * Simple text input component
@@ -25,30 +26,24 @@ export default function TextInput({
   const id = `field-${name}`;
   
   const handleChange = (e) => {
-    let newValue = e.target.value;
+    let inputValue = e.target.value;
     
-    // Apply phone number masking
+    // Special handling for phone number fields
     if (type === 'tel' || name === 'phoneNumber') {
-      newValue = formatPhoneNumber(newValue);
+      // Store unformatted digits in state
+      const digitsOnly = unformatPhone(inputValue);
+      onChange(name, digitsOnly);
+    } else {
+      onChange(name, inputValue);
     }
-    
-    onChange(name, newValue);
   };
-  
-  // Phone number formatting function
-  const formatPhoneNumber = (value) => {
-    // Remove all non-digits
-    const digits = value.replace(/\D/g, '');
-    
-    // Apply formatting based on length
-    if (digits.length >= 6) {
-      return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6,10)}`;
-    } else if (digits.length >= 3) {
-      return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
-    } else if (digits.length > 0) {
-      return `(${digits}`;
+
+  // Get display value (formatted for phone, raw for others)
+  const getDisplayValue = () => {
+    if (type === 'tel' || name === 'phoneNumber') {
+      return formatPhone(value);
     }
-    return digits;
+    return value || '';
   };
   
   const inputClasses = `
@@ -74,7 +69,7 @@ export default function TextInput({
         id={id}
         name={name}
         type={type}
-        value={value || ''}
+        value={getDisplayValue()}
         onChange={handleChange}
         onBlur={onBlur}
         placeholder={placeholder}
