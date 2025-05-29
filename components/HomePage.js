@@ -123,6 +123,7 @@ export default function HomePage() {
     purchaseTimeFrame: "",
     ownHome: "",
     creditRating: "",
+    bestCallTime: "",
     tcpa: "",
     tcpaLanguage: "",
     xxTrustedFormCertUrl: "",
@@ -202,7 +203,7 @@ export default function HomePage() {
   useEffect(() => {
     const fieldsToLoad = [
       'firstName', 'lastName', 'email', 'phoneNumber', 'address', 'city', 'state', 'zip',
-      'jobType', 'purchaseTimeFrame', 'ownHome', 'creditRating', 'tcpa', 'tcpaLanguage', 'xxTrustedFormCertUrl',
+      'jobType', 'purchaseTimeFrame', 'ownHome', 'creditRating', 'bestCallTime', 'tcpa', 'tcpaLanguage', 'xxTrustedFormCertUrl',
       'addition_type', 'bathroomProjectType', 'cabinetsProjectType', 'carryWeight',
       'deckMaterial', 'doorProjectType', 'doorsMaterial', 'electricalProjectType',
       'electricalServiceType', 'fenceType', 'flooringInquiyType', 'flooringType',
@@ -316,10 +317,26 @@ export default function HomePage() {
           toast.error("What service do you need? is required");
           return;
         }
+        if (!formData.purchaseTimeFrame) {
+          toast.error("When do you need service? is required");
+          return;
+        }
+        if (!formData.ownHome) {
+          toast.error("Do you own your home? is required");
+          return;
+        }
         break;
       
       case 3:
         // Step 3: Job-specific details (conditional validation)
+        if (formData.jobType) {
+          const { validateConditionalFieldsForJobType } = require('@/utils/conditionalLogic');
+          const conditionalErrors = validateConditionalFieldsForJobType(formData.jobType, formData);
+          if (conditionalErrors.length > 0) {
+            toast.error(conditionalErrors[0]); // Show first error
+            return;
+          }
+        }
         break;
       
       case 4:
@@ -366,6 +383,10 @@ export default function HomePage() {
         }
         if (!new RegExp('^\\d{5,8}$').test(formData.zip)) {
           toast.error("Please enter a valid zip code (5-8 digits)");
+          return;
+        }
+        if (!formData.bestCallTime) {
+          toast.error("Best time to call is required");
           return;
         }
         break;

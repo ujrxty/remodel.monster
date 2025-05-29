@@ -189,11 +189,130 @@ function getValidationErrors(formData, validators) {
   return errors;
 }
 
+/**
+ * Validates conditional fields for a specific job type
+ * @param {string} jobType - The selected job type
+ * @param {object} formData - The current form data
+ * @returns {Array} Array of validation error messages
+ */
+function validateConditionalFieldsForJobType(jobType, formData) {
+  const errors = [];
+  const requiredFields = jobTypeFieldMap[jobType] || [];
+  
+  requiredFields.forEach(fieldName => {
+    const value = formData[fieldName];
+    if (!value || value === '') {
+      // Get human-readable field name for error message
+      const fieldLabel = getFieldLabel(fieldName);
+      errors.push(`${fieldLabel} is required for ${getJobTypeLabel(jobType)} projects`);
+    }
+  });
+  
+  return errors;
+}
+
+/**
+ * Get human-readable field labels for error messages
+ */
+function getFieldLabel(fieldName) {
+  const labelMap = {
+    numberOfWindows: 'Number of Windows',
+    windowsProjectType: 'Window Project Type',
+    doorProjectType: 'Door Project Type', 
+    doorsMaterial: 'Door Material',
+    preHung: 'Pre-Hung Door',
+    hvacAirType: 'HVAC Air Type',
+    hvacProjectType: 'HVAC Project Type',
+    hvacSystemType: 'HVAC System Type',
+    kitchenProjectType: 'Kitchen Project Type',
+    bathroomProjectType: 'Bathroom Project Type',
+    addition_type: 'Addition Type',
+    cabinetsProjectType: 'Cabinets Project Type',
+    deckMaterial: 'Deck Material',
+    electricalProjectType: 'Electrical Project Type',
+    electricalServiceType: 'Electrical Service Type',
+    fenceType: 'Fence Type',
+    flooringInquiyType: 'Flooring Inquiry Type',
+    flooringType: 'Flooring Type',
+    garageDoorsProjectType: 'Garage Door Project Type',
+    numberOfDoors: 'Number of Doors',
+    openers: 'Door Openers',
+    protection: 'Gutter Protection',
+    homeSecurityBuildingType: 'Building Type',
+    insulationServiceType: 'Insulation Service Type',
+    landscapingProjectType: 'Landscaping Project Type',
+    landscapingServiceType: 'Landscaping Service Type',
+    paintingProjectType: 'Painting Project Type',
+    pestControlProjectType: 'Pest Control Project Type',
+    plumbingProjectType: 'Plumbing Project Type',
+    plumbingServiceType: 'Plumbing Service Type',
+    remodelingLocationInHome: 'Remodeling Location',
+    remodelingProjectType: 'Remodeling Project Type',
+    roofProjectType: 'Roof Project Type',
+    roofingType: 'Roofing Type',
+    sidingProjectType: 'Siding Project Type',
+    sidingType: 'Siding Type',
+    carryWeight: 'Weight Capacity',
+    numStairs: 'Number of Stairs',
+    stairLiftProjectType: 'Stair Lift Project Type',
+    stairLiftStairType: 'Stair Type',
+    sunroomNumRooms: 'Number of Rooms',
+    sunroomLength: 'Sunroom Length',
+    sunroomWidth: 'Sunroom Width',
+    poolType: 'Pool Type',
+    swimmingPoolProjectType: 'Swimming Pool Project Type',
+    swimmingPoolServiceType: 'Swimming Pool Service Type',
+    treesProjectType: 'Trees Project Type'
+  };
+  
+  return labelMap[fieldName] || fieldName;
+}
+
+/**
+ * Get human-readable job type labels
+ */
+function getJobTypeLabel(jobType) {
+  const jobTypeMap = {
+    windows: 'Window',
+    doors: 'Door', 
+    hvac: 'HVAC',
+    kitchen: 'Kitchen',
+    bathroom: 'Bathroom',
+    additions: 'Addition',
+    cabinets: 'Cabinet',
+    deck: 'Deck',
+    electrical: 'Electrical',
+    fencing: 'Fencing',
+    flooring: 'Flooring',
+    garage_doors: 'Garage Door',
+    gutters: 'Gutter',
+    handy_man: 'Handyman',
+    home_security: 'Home Security',
+    insulation: 'Insulation',
+    landscaping: 'Landscaping',
+    painting: 'Painting',
+    pest_control: 'Pest Control',
+    plumbing: 'Plumbing',
+    remodeling: 'Remodeling',
+    roof: 'Roofing',
+    siding: 'Siding',
+    stair_lift: 'Stair Lift',
+    sunrooms: 'Sunroom',
+    swimming_pool: 'Swimming Pool',
+    trees: 'Tree Service'
+  };
+  
+  return jobTypeMap[jobType] || jobType;
+}
+
 module.exports = {
   jobTypeFieldMap,
   getAllJobTypeFields,
   getRequiredFields,
   getVisibleFields,
   areRequiredFieldsFilled,
-  getValidationErrors
+  getValidationErrors,
+  validateConditionalFieldsForJobType,
+  getFieldLabel,
+  getJobTypeLabel
 };
