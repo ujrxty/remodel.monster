@@ -108,24 +108,14 @@ export default function SpecificDetails(props) {
       
       {/* Click-to-call option */}
       {formData.jobType && getJobTypeDID(formData.jobType) && (
-        <div className="mb-6 p-4 bg-secondary/50 border border-border rounded-md">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-sm text-muted-foreground mb-1">
-                Need help with your {getJobTypeLabel(formData.jobType).toLowerCase()} project?
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Skip the questions and speak directly with a specialist
-              </p>
-            </div>
-            <a 
-              href={getJobTypeDID(formData.jobType)}
-              className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md text-sm font-medium transition-colors"
-            >
-              📞 Call Now
-            </a>
-          </div>
-        </div>
+        <a 
+          href={getJobTypeDID(formData.jobType)}
+          className="block mb-6 p-4 bg-secondary border border-border rounded-md hover:bg-secondary/80 transition-colors"
+        >
+          <p className="text-center text-secondary-foreground font-medium">
+            📞 Unsure of project details? Click to speak with a specialist now.
+          </p>
+        </a>
       )}
       
       {/* Render all configured fields for this step */}

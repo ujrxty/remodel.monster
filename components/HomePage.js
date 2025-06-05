@@ -131,6 +131,10 @@ export default function HomePage() {
     tcpaLanguage: "",
     xxTrustedFormCertUrl: "",
     
+    // Tracking parameters
+    transaction_id: "",
+    source: "",
+    
     // Conditional fields for all job types
     addition_type: "",
     bathroomProjectType: "",
@@ -207,6 +211,7 @@ export default function HomePage() {
     const fieldsToLoad = [
       'firstName', 'lastName', 'email', 'phoneNumber', 'address', 'city', 'state', 'zip',
       'jobType', 'purchaseTimeFrame', 'ownHome', 'creditRating', 'bestCallTime', 'tcpa', 'tcpaLanguage', 'xxTrustedFormCertUrl',
+      'transaction_id', 'source',
       'addition_type', 'bathroomProjectType', 'cabinetsProjectType', 'carryWeight',
       'deckMaterial', 'doorProjectType', 'doorsMaterial', 'electricalProjectType',
       'electricalServiceType', 'fenceType', 'flooringInquiyType', 'flooringType',
@@ -283,8 +288,14 @@ export default function HomePage() {
     sessionStorage.setItem("affiliate_ref_id", affiliateRefID || "");
     sessionStorage.setItem("transaction_id", transaction_id || "");
 
-    if (transaction_id) sessionStorage.setItem("transaction_id", transaction_id);
-    if (source) sessionStorage.setItem("source", source);
+    if (transaction_id) {
+      sessionStorage.setItem("transaction_id", transaction_id);
+      handleFieldChange('transaction_id', transaction_id);
+    }
+    if (source) {
+      sessionStorage.setItem("source", source);
+      handleFieldChange('source', source);
+    }
     if (clickid) sessionStorage.setItem("clickid", clickid);
     if (offerid) sessionStorage.setItem("offer_id", offerid);
     
@@ -306,7 +317,7 @@ export default function HomePage() {
     if (firstname) sessionStorage.setItem("firstname", firstname);
     if (lastname) sessionStorage.setItem("lastname", lastname);
     if (email) sessionStorage.setItem("email", email);
-  }, [affiliateID, affiliateSubID, affiliateRefID]);
+  }, [affiliateID, affiliateSubID, affiliateRefID, handleFieldChange]);
 
   const handleSubmit = async () => {
     switch (step) {
@@ -473,6 +484,7 @@ export default function HomePage() {
                 />
                 <div className="flex justify-between mt-4">
                   <button
+                    type="button"
                     onClick={handleBack}
                     className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
@@ -497,6 +509,7 @@ export default function HomePage() {
                 />
                 <div className="flex justify-between mt-4">
                   <button
+                    type="button"
                     onClick={handleBack}
                     className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
@@ -521,6 +534,7 @@ export default function HomePage() {
                 />
                 <div className="flex justify-between mt-4">
                   <button
+                    type="button"
                     onClick={handleBack}
                     className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
@@ -552,6 +566,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-between mt-4">
                   <button
+                    type="button"
                     onClick={handleBack}
                     className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >
@@ -576,6 +591,7 @@ export default function HomePage() {
                 />
                 <div className="flex justify-between mt-4">
                   <button
+                    type="button"
                     onClick={handleBack}
                     className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
                   >

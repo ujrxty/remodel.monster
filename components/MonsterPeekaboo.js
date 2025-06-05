@@ -92,6 +92,7 @@ export default function MonsterPeekaboo() {
   };
 
   return (
+    /* eslint-disable-next-line @next/next/no-img-element */
     <img
       src="/monster-favicon.webp"
       alt="Remodel Monster"

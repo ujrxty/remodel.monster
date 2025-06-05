@@ -93,6 +93,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src='https://api.trustedform.com/ns.gif' alt='' />
         </noscript>
       </body>
