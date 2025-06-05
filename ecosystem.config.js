@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
-    name: "resourcelink",
-    cwd: "/var/www/resourcelink.online",
+    name: "remodel.monster",
+    cwd: "/var/www/remodel.monster",
     script: "npm",
     args: "start",
     env: {

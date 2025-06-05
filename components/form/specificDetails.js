@@ -11,6 +11,7 @@ import RadioGroup from './RadioGroup';
 import DateField from './DateField';
 import ConditionalFieldGroup from './ConditionalFieldGroup';
 import { validateField } from '@/utils/input/inputValidation';
+import { getJobTypeDID, getJobTypeLabel } from '@/config/jobTypes';
 
 export default function SpecificDetails(props) {
   // Destructure props to get necessary values
@@ -104,6 +105,28 @@ export default function SpecificDetails(props) {
       <h2 className="text-xl font-semibold mb-4 text-card-foreground">
         Job Specific Details
       </h2>
+      
+      {/* Click-to-call option */}
+      {formData.jobType && getJobTypeDID(formData.jobType) && (
+        <div className="mb-6 p-4 bg-secondary/50 border border-border rounded-md">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-muted-foreground mb-1">
+                Need help with your {getJobTypeLabel(formData.jobType).toLowerCase()} project?
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Skip the questions and speak directly with a specialist
+              </p>
+            </div>
+            <a 
+              href={getJobTypeDID(formData.jobType)}
+              className="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md text-sm font-medium transition-colors"
+            >
+              📞 Call Now
+            </a>
+          </div>
+        </div>
+      )}
       
       {/* Render all configured fields for this step */}
       

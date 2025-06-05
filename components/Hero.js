@@ -129,7 +129,7 @@ function Hero({ isInjured, setIsInjured, handleSubmit, progress = 10, hideButton
               className="inline-block bg-secondary text-secondary-foreground p-4 shadow-md border-2 border-border mb-4"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-2">
-                Find Expert Remodel Pros Near You! 
+                Find Remodel Pros Near You! 
               </h1>
               <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                 Windows, Roofing, Bathroom, and More 

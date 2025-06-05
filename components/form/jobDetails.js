@@ -11,6 +11,7 @@ import RadioGroup from './RadioGroup';
 import DateField from './DateField';
 import ConditionalFieldGroup from './ConditionalFieldGroup';
 import { validateField } from '@/utils/input/inputValidation';
+import { getEnabledJobTypes } from '@/config/jobTypes';
 
 export default function JobDetails(props) {
   // Destructure props to get necessary values
@@ -113,7 +114,7 @@ export default function JobDetails(props) {
         value={formData.jobType}
         onChange={onChange}
         onValidate={handleValidate}
-        options={[{"value":"additions","label":"Additions"},{"value":"bathroom","label":"Bathroom"},{"value":"cabinets","label":"Cabinets"},{"value":"deck","label":"Deck"},{"value":"doors","label":"Doors"},{"value":"electrical","label":"Electrical"},{"value":"fencing","label":"Fencing"},{"value":"flooring","label":"Flooring"},{"value":"garage_doors","label":"Garage Doors"},{"value":"gutters","label":"Gutters"},{"value":"handy_man","label":"Handyman"},{"value":"home_security","label":"Home Security"},{"value":"hvac","label":"HVAC"},{"value":"insulation","label":"Insulation"},{"value":"kitchen","label":"Kitchen"},{"value":"landscaping","label":"Landscaping"},{"value":"painting","label":"Painting"},{"value":"pest_control","label":"Pest Control"},{"value":"plumbing","label":"Plumbing"},{"value":"remodeling","label":"Remodeling"},{"value":"roof","label":"Roof"},{"value":"siding","label":"Siding"},{"value":"stair_lift","label":"Stair Lift"},{"value":"sunrooms","label":"Sunrooms"},{"value":"swimming_pool","label":"Swimming Pool"},{"value":"trees","label":"Trees"},{"value":"windows","label":"Windows"}]}
+        options={getEnabledJobTypes()}
         required={true}
         error={errors.jobType || localErrors.jobType}
         helpText=""

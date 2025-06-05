@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from 'framer-motion';
@@ -72,6 +72,9 @@ const Footer = () => (
         <div className="mb-6 md:mb-0">
           <h3 className="font-bold text-xl mb-2 text-black">Remodel MONSTER</h3>
           <p className="text-black/60">© 2025 All Rights Reserved</p>
+          <div className="mt-4 text-xs text-black/50 max-w-md">
+            <p>This Website is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and This Website does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on This Website.</p>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div>
@@ -179,12 +182,12 @@ export default function HomePage() {
   });
 
   // Single onChange handler for all form fields
-  const handleFieldChange = (field, value) => {
+  const handleFieldChange = useCallback((field, value) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
-  };
+  }, []);
 
   const [isAccident, setIsAccident] = useState("Yes");
   
