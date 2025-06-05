@@ -83,7 +83,7 @@ If you are a California resident, you have specific rights regarding your person
 - The right to opt-out of the sale of your personal information
 - The right to non-discrimination for exercising your privacy rights
 
-To exercise these rights, please contact us at privacy@remodel.monster or call us at 1-800-REMODEL.
+To exercise these rights, please contact us at privacy@remodel.monster.
 
 ## 11. Contact Us
 
@@ -92,8 +92,7 @@ If you have any questions about this Privacy Policy, or if you would like to req
 **Remodel MONSTER**  
 1735 Buford Hwy, Ste 215-225  
 Cumming, GA 30041  
-Email: privacy@remodel.monster  
-Phone: 1-800-REMODEL
+Email: privacy@remodel.monster
 
 ## 12. Consent
 

@@ -438,10 +438,76 @@ export default function HomePage() {
       const data = await response.json();
       
       if (response.ok) {
-        toast.success("Form submitted successfully!");
-        router.push("/thanks");
+        // Check if there's a redirect URL in the response
+        if (data.redirectUrl) {
+          window.location.href = data.redirectUrl;
+        } else {
+          // Success but no redirect - show thanks message and send to next funnel
+          toast.success("Thanks! We will be in touch. In the meantime, check out some additional offers from our partners.");
+          
+          // Show countdown and redirect after 5 seconds
+          let countdown = 5;
+          const countdownToast = toast.loading(`Redirecting to additional offers in ${countdown}s (click to go now)`, {
+            duration: 5000,
+            action: {
+              label: 'Go Now',
+              onClick: () => {
+                window.location.href = 'https://resourcelink.online/sorry/all';
+              }
+            }
+          });
+          
+          const countdownInterval = setInterval(() => {
+            countdown--;
+            if (countdown > 0) {
+              toast.loading(`Redirecting to additional offers in ${countdown}s (click to go now)`, {
+                id: countdownToast,
+                action: {
+                  label: 'Go Now',
+                  onClick: () => {
+                    window.location.href = 'https://resourcelink.online/sorry/all';
+                  }
+                }
+              });
+            } else {
+              clearInterval(countdownInterval);
+              window.location.href = 'https://resourcelink.online/sorry/all';
+            }
+          }, 1000);
+        }
       } else {
-        toast.error(data.message || "Failed to submit form");
+        // Show rejection message with countdown redirect
+        toast.error("Someone will call you back shortly. In the meantime, check out some additional offers from our partners.");
+        
+        // Show countdown and redirect after 5 seconds
+        let countdown = 5;
+        const countdownToast = toast.loading(`Redirecting to additional offers in ${countdown}s (click to go now)`, {
+          duration: 5000,
+          action: {
+            label: 'Go Now',
+            onClick: () => {
+              window.location.href = 'https://resourcelink.online/sorry/all';
+            }
+          }
+        });
+        
+        const countdownInterval = setInterval(() => {
+          countdown--;
+          if (countdown > 0) {
+            toast.loading(`Redirecting to additional offers in ${countdown}s (click to go now)`, {
+              id: countdownToast,
+              action: {
+                label: 'Go Now',
+                onClick: () => {
+                  window.location.href = 'https://resourcelink.online/sorry/all';
+                }
+              }
+            });
+          } else {
+            clearInterval(countdownInterval);
+            window.location.href = 'https://resourcelink.online/sorry/all';
+          }
+        }, 1000);
       }
     } catch (error) {
       console.error("API Error:", error);

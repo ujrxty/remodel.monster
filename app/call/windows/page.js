@@ -5,16 +5,28 @@ export const metadata = {
   keywords: ["windows", "window replacement", "window installation", "window repair", "call now", "instant quote"],
 };
 
+import Link from 'next/link';
+
 export default function WindowsCallPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      {/* Navigation Header */}
+      <div className="bg-white border-b border-gray-200 py-4 px-4">
+        <div className="max-w-lg mx-auto flex items-center justify-between">
+          <h2 className="text-xl font-bold text-gray-900">Remodel MONSTER</h2>
+          <Link href="/" className="text-blue-600 hover:text-blue-800 text-sm">
+            ← Back to Form
+          </Link>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-lg mx-auto">
           
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Need Windows Replaced?
+              Need Windows Replaced or Repaired?
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-2">
               Call Now for Instant Quote!
@@ -123,6 +135,38 @@ export default function WindowsCallPage() {
 
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="py-10 bg-secondary text-black" data-theme="light">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="mb-6 md:mb-0">
+              <h3 className="font-bold text-xl mb-2 text-black">Remodel MONSTER</h3>
+              <p className="text-black/60">© 2025 All Rights Reserved</p>
+              <div className="mt-4 text-xs text-black/50 max-w-md">
+                <p>This Website is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and This Website does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on This Website.</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-bold mb-4 text-black">Links</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/" className="text-black/60 hover:text-black">Home</Link></li>
+                  <li><Link href="/" className="text-black/60 hover:text-black">About</Link></li>
+                  <li><Link href="/" className="text-black/60 hover:text-black">Contact</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold mb-4 text-black">Legal</h4>
+                <ul className="space-y-2">
+                  <li><Link href="/privacy" className="text-black/60 hover:text-black">Privacy Policy</Link></li>
+                  <li><Link href="/terms" className="text-black/60 hover:text-black">Terms of Service</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
