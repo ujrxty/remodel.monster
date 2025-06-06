@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { compileMDX } from "next-mdx-remote/rsc";
+import PageHeader from "@/components/PageHeader";
 
 export default async function About() {
   // Read the markdown file
@@ -15,8 +16,8 @@ export default async function About() {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageHeader title="About Us" />
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-8 text-foreground">About Us</h1>
         <div className="prose prose-lg max-w-none text-foreground">
           <div className="bg-card rounded-lg p-8 shadow-sm border border-border">
             {content}

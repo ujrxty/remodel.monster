@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import TextInput from '@/components/form/TextInput';
+import PageHeader from '@/components/PageHeader';
 import toast from 'react-hot-toast';
 
 export default function Contact() {
@@ -100,8 +101,8 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageHeader title="Contact Us" />
       <div className="max-w-2xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-8 text-foreground">Contact Us</h1>
         
         <Card>
           <CardHeader>

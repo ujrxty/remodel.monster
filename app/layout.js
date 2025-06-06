@@ -8,6 +8,7 @@ import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, ModeToggle } from "@/components/theme-provider";
 import MonsterPeekaboo from "@/components/MonsterPeekaboo";
+import Footer from "@/components/Footer";
 
 
 export const metadata = {
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider defaultTheme="light">
           <Toaster position="top-center" />
           {children}
+          <Footer />
           <ModeToggle />
           <MonsterPeekaboo />
         </ThemeProvider>
