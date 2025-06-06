@@ -5,11 +5,11 @@ description: Legal Terms for Remodel MONSTER
 
 LAST UPDATED: January 23, 2025
 
-Remodel MONSTER owns and operates the website located at remodel.monster (the "Site"). Remodel MONSTER provides and maintains this Site for your information, conditioned on your acceptance, without modification, of the terms, conditions and notices contained in these Terms of Use and in our Privacy Policy. By accessing and using the Site, you accept and agree without limitation to the following:
+iClick Interactive owns and operates the website located at remodel.monster (the "Site"). iClick Interactive provides and maintains this Site for your information, conditioned on your acceptance, without modification, of the terms, conditions and notices contained in these Terms of Use and in our Privacy Policy. By accessing and using the Site, you accept and agree without limitation to the following:
 
 ## Products and Services
 
-Remodel MONSTER is not a contractor or home improvement service provider and is not responsible for any home improvement services advertised or offered to you. No specific home improvement services are offered to you on this Site by Remodel MONSTER. Specific services are offered to you directly by the contractor or service provider.
+iClick Interactive is not a contractor or home improvement service provider and is not responsible for any home improvement services advertised or offered to you. No specific home improvement services are offered to you on this Site by iClick Interactive. Specific services are offered to you directly by the contractor or service provider.
 
 ## E-Sign Consent
 
@@ -17,15 +17,15 @@ You agree that clicking "Submit" or any similar button acts as your electronic s
 
 ## SMS Terms and Conditions
 
-By clicking "Submit", I agree to receive informational, promotional or marketing related SMS messages from Remodel MONSTER and marketing partners. This is a standard rate subscription service available on most carriers including U.S. Cellular, AT&T, Cellular One, T-Mobile, Sprint, Boost, MetroPCS, Verizon Wireless, Alltel Wireless and Virgin Mobile. Msg&Data Rates May Apply. Requires text-enabled handset. Carriers are not liable for delayed or undelivered messages. You may cancel your subscription by texting STOP in response to the message you receive. You can also get info directly on your phone by texting HELP in response to the message you receive. Service will continue until customer cancels.
+By clicking "Submit", I agree to receive informational, promotional or marketing related SMS messages from iClick Interactive and marketing partners. This is a standard rate subscription service available on most carriers including U.S. Cellular, AT&T, Cellular One, T-Mobile, Sprint, Boost, MetroPCS, Verizon Wireless, Alltel Wireless and Virgin Mobile. Msg&Data Rates May Apply. Requires text-enabled handset. Carriers are not liable for delayed or undelivered messages. You may cancel your subscription by texting STOP in response to the message you receive. You can also get info directly on your phone by texting HELP in response to the message you receive. Service will continue until customer cancels.
 
 ## Email Opt-In
 
-By providing Remodel MONSTER with your email address, you agree to receive transactional and promotional emails from Remodel MONSTER, its marketing partners, contractors and service provider networks.
+By providing iClick Interactive with your email address, you agree to receive transactional and promotional emails from iClick Interactive, its marketing partners, contractors and service provider networks.
 
 ## Service Inquiry Policy
 
-Remodel MONSTER reserves the right to reject your inquiry at any time for any reason not prohibited by law. Remodel MONSTER may require additional information or verification before your form is accepted. When you submit your information through a form on our Site, you will be connected with a contractor or service provider for further consideration based on the contractor's or service provider's policies and procedures. This does not mean your service request has been approved. Service approval is solely the contractor's or service provider's decision. Remodel MONSTER is not responsible for taking, approving or denying your form. By submitting your information, you agree that if we cannot find a contractor or service provider that can offer you the type of service you initially requested, we will search our network of contractors or service providers to see if we can find other contractors or service providers with different services to help you.
+iClick Interactive reserves the right to reject your inquiry at any time for any reason not prohibited by law. iClick Interactive may require additional information or verification before your form is accepted. When you submit your information through a form on our Site, you will be connected with a contractor or service provider for further consideration based on the contractor's or service provider's policies and procedures. This does not mean your service request has been approved. Service approval is solely the contractor's or service provider's decision. iClick Interactive is not responsible for taking, approving or denying your form. By submitting your information, you agree that if we cannot find a contractor or service provider that can offer you the type of service you initially requested, we will search our network of contractors or service providers to see if we can find other contractors or service providers with different services to help you.
 
 ## Credit References
 
@@ -41,31 +41,31 @@ You agree to comply with all applicable laws, statutes, ordinances and regulatio
 
 ## Intellectual Property
 
-The trademarks, titles, characters, trade names, graphics, designs and other properties, including all software, text and images appearing on this Site is the intellectual property of Remodel MONSTER, its licensees, or other third parties who have authorized use of such properties on the Site.
+The trademarks, titles, characters, trade names, graphics, designs and other properties, including all software, text and images appearing on this Site is the intellectual property of iClick Interactive, its licensees, or other third parties who have authorized use of such properties on the Site.
 
-You have permission to view and make copies of documents, pages, images or other materials or content on this site for the sole purposes of requesting home improvement services. Remodel MONSTER reserves all other rights in this Site and its contents. You may not distribute, display, transmit or disseminate any documents, pages, images, materials or content without our prior written consent. Nothing contained on this Site should be construed as conferring any right or license to any trademark, copyright or other intellectual property right.
+You have permission to view and make copies of documents, pages, images or other materials or content on this site for the sole purposes of requesting home improvement services. iClick Interactive reserves all other rights in this Site and its contents. You may not distribute, display, transmit or disseminate any documents, pages, images, materials or content without our prior written consent. Nothing contained on this Site should be construed as conferring any right or license to any trademark, copyright or other intellectual property right.
 
 ## Limitation of Liability and Disclaimer of Warranties
 
-Remodel MONSTER uses commercially reasonable efforts to ensure that the information on this Site is accurate, but accuracy is not guaranteed. Remodel MONSTER makes no representations regarding your use of this Site or results that you may or may not obtain through such use.
+iClick Interactive uses commercially reasonable efforts to ensure that the information on this Site is accurate, but accuracy is not guaranteed. iClick Interactive makes no representations regarding your use of this Site or results that you may or may not obtain through such use.
 
-NEITHER REMODEL MONSTER NOR ANY OTHER PARTY INVOLVED IN CREATING, PRODUCING OR DELIVERING THIS SITE SHALL BE LIABLE FOR ANY DIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, INDIRECT OR PUNITIVE DAMAGES ARISING OUT OF YOUR ACCESS TO, OR USE OF, THIS SITE. EVERYTHING ON THIS SITE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT. THESE EXCLUSIONS AND LIMITATIONS ARE APPLIED TO THE FULLEST EXTENT PERMITTED BY LAW.
+NEITHER ICLICK INTERACTIVE NOR ANY OTHER PARTY INVOLVED IN CREATING, PRODUCING OR DELIVERING THIS SITE SHALL BE LIABLE FOR ANY DIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, INDIRECT OR PUNITIVE DAMAGES ARISING OUT OF YOUR ACCESS TO, OR USE OF, THIS SITE. EVERYTHING ON THIS SITE IS PROVIDED "AS IS" AND WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT. THESE EXCLUSIONS AND LIMITATIONS ARE APPLIED TO THE FULLEST EXTENT PERMITTED BY LAW.
 
 ## Third Party Content
 
-This Site may contain links to websites maintained by third parties. Remodel MONSTER is not responsible for the content or privacy policies of third party websites, and the existence of such links should not be considered an endorsement or recommendation of those websites, the product or service offered or any third parties associated with those websites.
+This Site may contain links to websites maintained by third parties. iClick Interactive is not responsible for the content or privacy policies of third party websites, and the existence of such links should not be considered an endorsement or recommendation of those websites, the product or service offered or any third parties associated with those websites.
 
 ## Privacy
 
-Remodel MONSTER's Privacy Policy, which is incorporated herein by reference, is applicable to any data supplied through this Site. The Privacy Policy sets out your rights and our responsibilities regarding your personal information. Remodel MONSTER will not use your information in any way inconsistent with the purposes and limitations provided in the Privacy Policy. Remodel MONSTER reserves the right, in its sole discretion, to modify the Privacy Policy without prior notice to you. Modifications to the Privacy Policy are effective when posted and your continued use of this Site signifies your acceptance of such modifications.
+iClick Interactive's Privacy Policy, which is incorporated herein by reference, is applicable to any data supplied through this Site. The Privacy Policy sets out your rights and our responsibilities regarding your personal information. iClick Interactive will not use your information in any way inconsistent with the purposes and limitations provided in the Privacy Policy. iClick Interactive reserves the right, in its sole discretion, to modify the Privacy Policy without prior notice to you. Modifications to the Privacy Policy are effective when posted and your continued use of this Site signifies your acceptance of such modifications.
 
 ## Security
 
-Remodel MONSTER uses industry-recognized technology to protect your personal information. Although Remodel MONSTER takes commercially reasonable measures to secure your personal information submitted through this Site, Remodel MONSTER cannot guarantee that your information will not be intercepted or decrypted by others. So long as Remodel MONSTER uses commercially reasonable security measures, it accepts no responsibility for such interception or decryption except as required by law.
+iClick Interactive uses industry-recognized technology to protect your personal information. Although iClick Interactive takes commercially reasonable measures to secure your personal information submitted through this Site, iClick Interactive cannot guarantee that your information will not be intercepted or decrypted by others. So long as iClick Interactive uses commercially reasonable security measures, it accepts no responsibility for such interception or decryption except as required by law.
 
 ## Site Use
 
-Remodel MONSTER does not charge you any fees for your use of this Site or our marketplace service. Remodel MONSTER is not acting as an agent for (1) you, (2) any contractor or service provider or (3) any supplier or vendor used in the evaluation of your service inquiry or other use of this Site. Remodel MONSTER may receive compensation from contractors or service providers and other third parties for its services.
+iClick Interactive does not charge you any fees for your use of this Site or our marketplace service. iClick Interactive is not acting as an agent for (1) you, (2) any contractor or service provider or (3) any supplier or vendor used in the evaluation of your service inquiry or other use of this Site. iClick Interactive may receive compensation from contractors or service providers and other third parties for its services.
 
 ## Law and Venue
 
@@ -73,31 +73,31 @@ This Agreement and all disputes shall be governed by, and construed in accordanc
 
 ## Binding Arbitration
 
-Should any dispute arise as to the interpretation of any term or provision of these Terms of Use or with regard to any of your dealings with Remodel MONSTER or with any contractor or service provider you work with as a result of Remodel MONSTER's service, those issues shall be decided by binding arbitration. Arbitration proceeding shall be conducted under the applicable rules in Forsyth County, Georgia. The decision of the arbitrator shall be final and binding on both parties. The prevailing party shall be entitled to recover the cost of arbitration, travel expenses, expert testimony, travel expenses of experts, and all other expenses reasonably incurred in bringing or defending an arbitration claim, from the other party unless otherwise prohibited by law.
+Should any dispute arise as to the interpretation of any term or provision of these Terms of Use or with regard to any of your dealings with iClick Interactive or with any contractor or service provider you work with as a result of iClick Interactive's service, those issues shall be decided by binding arbitration. Arbitration proceeding shall be conducted under the applicable rules in Forsyth County, Georgia. The decision of the arbitrator shall be final and binding on both parties. The prevailing party shall be entitled to recover the cost of arbitration, travel expenses, expert testimony, travel expenses of experts, and all other expenses reasonably incurred in bringing or defending an arbitration claim, from the other party unless otherwise prohibited by law.
 
 ## Modification
 
-Remodel MONSTER reserves the right to modify these Terms of Use from time to time and without notice to you. Your use of this Site after such modification constitutes your acceptance of and agreement to any new or amended terms.
+iClick Interactive reserves the right to modify these Terms of Use from time to time and without notice to you. Your use of this Site after such modification constitutes your acceptance of and agreement to any new or amended terms.
 
 ## Indemnification
 
-By using this Site, you agree to indemnify, defend and hold harmless Remodel MONSTER, its subsidiaries, affiliates, officers, agents and other partners and employees, from any loss, liability, claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use or attempted use of the Site.
+By using this Site, you agree to indemnify, defend and hold harmless iClick Interactive, its subsidiaries, affiliates, officers, agents and other partners and employees, from any loss, liability, claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of your use or attempted use of the Site.
 
 ## Violation of the Terms of Use
 
-By using the Site, you understand and agree that Remodel MONSTER in its sole discretion and without prior notice may terminate your access to this Site and to any services offered, and may remove any content you have provided if Remodel MONSTER believes that such content violates or is inconsistent with these Terms of Use or the Privacy Policy or their intent, or that such content may be disruptive, offensive or in violation of applicable laws.
+By using the Site, you understand and agree that iClick Interactive in its sole discretion and without prior notice may terminate your access to this Site and to any services offered, and may remove any content you have provided if iClick Interactive believes that such content violates or is inconsistent with these Terms of Use or the Privacy Policy or their intent, or that such content may be disruptive, offensive or in violation of applicable laws.
 
 ## Class Action Waiver
 
-ANY PROCEEDINGS TO RESOLVE, LITIGATE OR ARBITRATE ANY DISPUTE IN ANY FORUM WILL BE CONDUCTED SOLELY ON AN INDIVIDUAL BASIS. NEITHER YOU NOR REMODEL MONSTER WILL SEEK TO HAVE ANY DISPUTE HEARD AS A CLASS ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR IN ANY OTHER PROCEEDING IN WHICH EITHER PARTY ACTS OR PROPOSES TO ACT IN A REPRESENTATIVE CAPACITY. NO ARBITRATION OR PROCEEDING WILL BE COMBINED WITH ANOTHER WITHOUT THE PRIOR WRITTEN CONSENT OF ALL PARTIES TO ALL AFFECTED ARBITRATIONS OR PROCEEDINGS. FURTHERMORE, YOU AGREE THAT YOU WILL NOT SEEK TO HAVE ANY DISPUTE AGAINST ANY CONTRACTOR OR SERVICE PROVIDER TO WHOM YOU ARE REFERRED HEARD AS A CLASS ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR IN ANY OTHER PROCEEDING IN WHICH EITHER PARTY ACTS OR PROPOSES TO ACT IN A REPRESENTATIVE CAPACITY. THIS CLASS ACTION WAIVER MAY BE LIMITED BY APPLICABLE LAW, BUT IS INTENDED TO BE ENFORCED TO THE FULL EXTENT ALLOWED BY LAW.
+ANY PROCEEDINGS TO RESOLVE, LITIGATE OR ARBITRATE ANY DISPUTE IN ANY FORUM WILL BE CONDUCTED SOLELY ON AN INDIVIDUAL BASIS. NEITHER YOU NOR ICLICK INTERACTIVE WILL SEEK TO HAVE ANY DISPUTE HEARD AS A CLASS ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR IN ANY OTHER PROCEEDING IN WHICH EITHER PARTY ACTS OR PROPOSES TO ACT IN A REPRESENTATIVE CAPACITY. NO ARBITRATION OR PROCEEDING WILL BE COMBINED WITH ANOTHER WITHOUT THE PRIOR WRITTEN CONSENT OF ALL PARTIES TO ALL AFFECTED ARBITRATIONS OR PROCEEDINGS. FURTHERMORE, YOU AGREE THAT YOU WILL NOT SEEK TO HAVE ANY DISPUTE AGAINST ANY CONTRACTOR OR SERVICE PROVIDER TO WHOM YOU ARE REFERRED HEARD AS A CLASS ACTION, PRIVATE ATTORNEY GENERAL ACTION, OR IN ANY OTHER PROCEEDING IN WHICH EITHER PARTY ACTS OR PROPOSES TO ACT IN A REPRESENTATIVE CAPACITY. THIS CLASS ACTION WAIVER MAY BE LIMITED BY APPLICABLE LAW, BUT IS INTENDED TO BE ENFORCED TO THE FULL EXTENT ALLOWED BY LAW.
 
 ## Miscellaneous
 
-All rights not expressly granted to you are reserved to Remodel MONSTER. The headings used in these Terms of Use are intended for convenience only, and shall not affect the construction and interpretation thereof. Remodel MONSTER's failure to insist upon or enforce strict performance of any provision of the Terms of Use shall not be construed as a waiver of such or any future provision or right. If any provision of these Terms of Use is held to be invalid or unenforceable, such determination shall not affect such provision in any other respect or any other provision of these Terms of Use, which shall remain in full force and effect. These Terms of Use and the Privacy Policy constitute the entire agreement and understanding between the parties with respect to the subject matter contained herein and supersedes and replaces any and all prior written or oral agreements related to the subject matter hereof.
+All rights not expressly granted to you are reserved to iClick Interactive. The headings used in these Terms of Use are intended for convenience only, and shall not affect the construction and interpretation thereof. iClick Interactive's failure to insist upon or enforce strict performance of any provision of the Terms of Use shall not be construed as a waiver of such or any future provision or right. If any provision of these Terms of Use is held to be invalid or unenforceable, such determination shall not affect such provision in any other respect or any other provision of these Terms of Use, which shall remain in full force and effect. These Terms of Use and the Privacy Policy constitute the entire agreement and understanding between the parties with respect to the subject matter contained herein and supersedes and replaces any and all prior written or oral agreements related to the subject matter hereof.
 
 ## Contact Information
 
-Address: Remodel MONSTER, 1735 Buford Hwy, Ste 215-225, Cumming GA 30041  
+Address: iClick Interactive, 1735 Buford Hwy, Ste 215-225, Cumming GA 30041  
 Email Address: support@remodel.monster
 
 ### INFORMATION FOR ISPs:
@@ -105,7 +105,7 @@ Email Address: support@remodel.monster
 Website: www.remodel.monster  
 Email Address: support@remodel.monster
 
-PLEASE NOTE THAT FOR QUESTIONS PERTAINING TO YOUR REQUEST STATUS, YOU MUST CONTACT YOUR CONTRACTOR OR SERVICE PROVIDER DIRECTLY. REMODEL MONSTER IS NOT YOUR CONTRACTOR OR SERVICE PROVIDER AND CANNOT ACCESS INFORMATION ABOUT YOUR SERVICE APPROVAL OR STATUS.
+PLEASE NOTE THAT FOR QUESTIONS PERTAINING TO YOUR REQUEST STATUS, YOU MUST CONTACT YOUR CONTRACTOR OR SERVICE PROVIDER DIRECTLY. ICLICK INTERACTIVE IS NOT YOUR CONTRACTOR OR SERVICE PROVIDER AND CANNOT ACCESS INFORMATION ABOUT YOUR SERVICE APPROVAL OR STATUS.
 
 ### Notice and Take Down Procedures
 
@@ -121,7 +121,7 @@ If you believe any materials accessible on or from the Site infringe your copyri
 Send the above information to:
 
 Legal Department  
-Remodel MONSTER  
+iClick Interactive  
 1735 Buford Hwy, Ste 215-225 Cumming GA 30041  
 Email Address: legal@remodel.monster
 
