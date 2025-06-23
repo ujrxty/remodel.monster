@@ -7,7 +7,7 @@ LAST UPDATED: January 23, 2025
 
 ## 1. Introduction
 
-This Privacy Policy explains how iClick Interactive ("we," "us," or "our") collects, uses, discloses, and safeguards your information when you visit our website at remodel.monster. We are committed to protecting your privacy and ensuring the security of your personal information.
+This Privacy Policy explains how Lead Plateau ("we," "us," or "our") collects, uses, discloses, and safeguards your information when you visit our website at remodel.monster. We are committed to protecting your privacy and ensuring the security of your personal information.
 
 ## 2. Information Collection and Use of Cookies
 
@@ -89,9 +89,9 @@ To exercise these rights, please contact us at privacy@remodel.monster.
 
 If you have any questions about this Privacy Policy, or if you would like to request your data or delete your data, please contact us at:
 
-**iClick Interactive**  
-1735 Buford Hwy, Ste 215-225  
-Cumming, GA 30041  
+**Lead Plateau**  
+8 The Green Suite 4000  
+Dover, DE 19901  
 Email: privacy@remodel.monster
 
 ## 12. Consent

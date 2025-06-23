@@ -122,6 +122,19 @@ npm run lint   # Code linting
 - **Graceful Degradation** - Contact form always shows success regardless of email backend
 - **Consistent UI** - Uses existing design system and components
 
+## Sprint 6 Complete: Branding & Theme Updates
+
+### Company Branding Update
+1. **Company Name Change** - Updated from "iClick Interactive" to "Lead Plateau"
+2. **Address Update** - Changed to "8 The Green Suite 4000, Dover, DE 19901"
+3. **API Temporarily Disabled** - Returning rejection responses until new endpoint configured
+
+### Files Updated
+- Footer.js - Company name in footer
+- privacy.md - Company name and address throughout
+- terms.md - All instances of company name and address
+- API_SPECS.md - Updated section header
+
 ## Sprint 5 Complete: Production Deployment
 
 ### PM2 Process Management Setup
@@ -153,7 +166,7 @@ pm2 logs remodel.monster       # View application logs
 pm2 save                       # Save process configuration
 ```
 
-## Ready for Production
+## Current Status
 ✅ All form validation implemented  
 ✅ API compliance ensured with tracking  
 ✅ Conditional logic tested  
@@ -161,3 +174,4 @@ pm2 save                       # Save process configuration
 ✅ Revenue funnel optimized - no dead ends
 ✅ Complete site navigation with about/contact pages
 ✅ **PRODUCTION DEPLOYMENT WITH PM2 PROCESS MANAGEMENT**
+⚠️ **API POSTING TEMPORARILY DISABLED** - Returns rejection response (needs new endpoint configuration)

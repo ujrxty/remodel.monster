@@ -17,7 +17,7 @@ This document will explain the posting method, provide sample requests, sample r
 
 **Ping/Post Method:** The Ping/Post method allows lead generators to ping the system with partial lead data first and get a response from the system before submitting the full data. Use the PING + POST strategy to submit a ping first to get a response from the system and then, based on the response, post the full lead data. You can also use the Full Post strategy to post the full lead data in one request. Please note that Phonexa will still process the request as a ping and a post when using the Full Post strategy.
 
-# 3. iClick Home Services FIELDS
+# 3. Lead Plateau Home Services FIELDS
 Use either **PING + POST** strategy, or **Full Post** strategy
 
 ## 3.1 PING

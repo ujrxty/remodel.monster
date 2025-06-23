@@ -178,27 +178,24 @@ export async function POST(request) {
   };
 
   try {
-    // Log the request for debugging (remove in production)
-    console.log("API Request:", {
+    // TEMPORARILY DISABLED - API posting disabled, returning rejection response
+    console.log("API Request (DISABLED):", {
       url: "https://leads-inst523-client.phonexa.com/fullpost/",
       method: "POST",
       body: JSON.stringify(jsonBody)
     });
 
-    // Send the request to the API
-    const response = await fetch("https://leads-inst523-client.phonexa.com/fullpost/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(jsonBody),
-    });
+    // Return a simulated rejection response
+    const data = {
+      status: "reject",
+      message: "Lead rejected",
+      leadId: null,
+      price: 0,
+      redirect: null
+    };
 
-    // Parse the response
-    const data = await response.json();
-
-    // Log the response (remove in production)
-    console.log("API Response:", data);
+    // Log the simulated response
+    console.log("API Response (SIMULATED REJECTION):", data);
 
     // Return the response
     return NextResponse.json(data);
