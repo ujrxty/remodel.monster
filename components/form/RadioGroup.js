@@ -64,7 +64,7 @@ export default function RadioGroup({
   
   return (
     <div className="w-full">
-      <div className="block text-sm font-medium text-foreground mb-2">
+      <div className="block text-sm font-medium text-foreground mb-1 text-left">
         {label} {required && <span className="text-destructive">*</span>}
       </div>
       
@@ -159,11 +159,11 @@ export default function RadioGroup({
       </div>
       
       {error && (
-        <p className="mt-1 text-sm text-destructive">{error}</p>
+        <p className="mt-0.5 text-sm text-destructive">{error}</p>
       )}
       
       {helpText && !error && (
-        <p className="mt-1 text-xs text-muted-foreground">{helpText}</p>
+        <p className="mt-0.5 text-xs text-muted-foreground">{helpText}</p>
       )}
     </div>
   );

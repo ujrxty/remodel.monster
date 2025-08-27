@@ -15,7 +15,7 @@ export default function FormStep({
     <div className="w-full">
       <h3 className="text-xl font-semibold mb-3 text-card-foreground">{title}</h3>
       <p className="text-muted-foreground mb-4">{description}</p>
-      <div className="space-y-4">
+      <div className="space-y-2">
         {children}
       </div>
     </div>

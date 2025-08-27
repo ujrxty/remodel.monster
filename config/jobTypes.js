@@ -100,7 +100,7 @@ export const jobTypeConfig = {
     label: "Plumbing Services"
   },
   remodeling: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "General Remodeling"
   },

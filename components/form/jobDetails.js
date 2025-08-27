@@ -101,7 +101,7 @@ export default function JobDetails(props) {
   
   // Render the form fields dynamically
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full space-y-2">
       <h2 className="text-xl font-semibold mb-4 text-card-foreground">
         Job Details
       </h2>
@@ -155,21 +155,6 @@ export default function JobDetails(props) {
         size="default"
       />
           
-      <SelectField
-        name="creditRating"
-        label="What is your credit rating?"
-        value={formData.creditRating}
-        onChange={onChange}
-        onValidate={handleValidate}
-        options={[{"value":"excellent","label":"Excellent"},{"value":"good","label":"Good"},{"value":"fair","label":"Fair"},{"value":"poor","label":"Poor"}]}
-        required={false}
-        error={errors.creditRating || localErrors.creditRating}
-        helpText=""
-        placeholder="Select an option..."
-        searchable={false}
-        grouped={false}
-        size="default"
-      />
           
     </div>
   );

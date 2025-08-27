@@ -126,7 +126,7 @@ export default function SelectField({
     <div className="w-full">
       <label 
         htmlFor={id}
-        className="block text-sm font-medium text-foreground mb-1"
+        className="block text-sm font-medium text-foreground mb-0.5 text-left"
       >
         {label} {required && <span className="text-destructive">*</span>}
       </label>
@@ -248,11 +248,11 @@ export default function SelectField({
       )}
       
       {error && (
-        <p className="mt-1 text-sm text-destructive">{error}</p>
+        <p className="mt-0.5 text-sm text-destructive">{error}</p>
       )}
       
       {helpText && !error && (
-        <p className="mt-1 text-xs text-muted-foreground">{helpText}</p>
+        <p className="mt-0.5 text-xs text-muted-foreground">{helpText}</p>
       )}
     </div>
   );

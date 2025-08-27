@@ -107,12 +107,13 @@ export default function PersonalInfo(props) {
   
   // Render the form fields dynamically
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full">
       <h2 className="text-xl font-semibold mb-4 text-card-foreground">
         Personal Information
       </h2>
       
-      {/* Render all configured fields for this step */}
+      {/* Responsive grid layout for form fields */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       
       <TextInput
         name="firstName"
@@ -194,6 +195,23 @@ export default function PersonalInfo(props) {
         size="default"
       />
           
+      <SelectField
+        name="creditRating"
+        label="What is your credit rating?"
+        value={formData.creditRating}
+        onChange={onChange}
+        onValidate={handleValidate}
+        options={[{"value":"excellent","label":"Excellent"},{"value":"good","label":"Good"},{"value":"fair","label":"Fair"},{"value":"poor","label":"Poor"}]}
+        required={false}
+        error={errors.creditRating || localErrors.creditRating}
+        helpText=""
+        placeholder="Select an option..."
+        searchable={false}
+        grouped={false}
+        size="default"
+      />
+      
+      </div>
     </div>
   );
 }
