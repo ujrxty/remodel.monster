@@ -19,6 +19,7 @@
     "next": "canary",
     "next-mdx-remote": "^5.0.0",
     "nodemailer": "^7.0.3",
+    "pm2": "^6.0.8",
     "react": "canary",
     "react-dom": "canary",
     "react-hot-toast": "latest",

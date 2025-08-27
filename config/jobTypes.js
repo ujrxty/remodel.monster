@@ -5,7 +5,7 @@
 
 export const jobTypeConfig = {
   additions: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Home Additions"
   },
@@ -15,17 +15,17 @@ export const jobTypeConfig = {
     label: "Bathroom Remodeling"
   },
   cabinets: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Cabinet Installation"
   },
   deck: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Deck Construction"
   },
   doors: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Door Installation"
   },
@@ -35,7 +35,7 @@ export const jobTypeConfig = {
     label: "Electrical Work"
   },
   fencing: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Fence Installation"
   },
@@ -45,22 +45,22 @@ export const jobTypeConfig = {
     label: "Flooring Installation"
   },
   garage_doors: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Garage Door Services"
   },
   gutters: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Gutter Installation"
   },
   handy_man: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Handyman Services"
   },
   home_security: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Home Security Systems"
   },
@@ -70,27 +70,27 @@ export const jobTypeConfig = {
     label: "HVAC Services"
   },
   insulation: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Insulation Services"
   },
   kitchen: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Kitchen Remodeling"
   },
   landscaping: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Landscaping Services"
   },
   painting: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Painting Services"
   },
   pest_control: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Pest Control"
   },
@@ -110,27 +110,27 @@ export const jobTypeConfig = {
     label: "Roofing Services"
   },
   siding: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Siding Installation"
   },
   stair_lift: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Stair Lift Installation"
   },
   sunrooms: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Sunroom Construction"
   },
   swimming_pool: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Swimming Pool Installation"
   },
   trees: {
-    enabled: true,
+    enabled: false,
     DID: null,
     label: "Tree Services"
   },
