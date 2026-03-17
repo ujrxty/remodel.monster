@@ -11,7 +11,7 @@ export default function WindowsCallPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Navigation Header */}
-      <div className="bg-white border-b border-gray-200 py-4 px-4">
+      <div className="bg-white border-b border-gray-200 pt-28 pb-4 px-4">
         <div className="max-w-lg mx-auto flex items-center justify-between">
           <h2 className="text-xl font-bold text-gray-900">Remodel MONSTER</h2>
           <Link href="/" className="text-blue-600 hover:text-blue-800 text-sm">

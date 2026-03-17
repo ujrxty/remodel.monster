@@ -10,35 +10,57 @@ import Hero from './Hero';
 import BenefitsList from './BenefitsList';
 
 const PainSection = () => (
-  <section className="py-12 bg-card">
+  <section className="py-16 md:py-24 bg-secondary">
     <div className="max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-8 text-card-foreground">
-        Common Home Improvement Challenges
-      </h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="text-center mb-12">
+        <p className="text-primary font-medium tracking-wide uppercase text-sm mb-2">Why homeowners choose us</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          We Solve the Hard Parts
+        </h2>
+      </div>
+      <div className="grid md:grid-cols-3 gap-8">
         {[
           {
-            title: "High Cost",
-            description: "Home improvements can be expensive. We provide cost-effective solutions."
+            icon: (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            ),
+            title: "Transparent Pricing",
+            description: "Get competitive quotes from multiple pros — no hidden fees, no surprise charges."
           },
           {
-            title: "Time Consuming", 
-            description: "Finding the right professionals can be time-consuming. We make it easy."
+            icon: (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            ),
+            title: "Save Hours of Research",
+            description: "Skip the endless searching. We match you with qualified professionals in minutes."
           },
           {
-            title: "Quality Concerns",
-            description: "Quality is often a concern. With us, you get only the best."
+            icon: (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            ),
+            title: "Vetted & Insured",
+            description: "Every professional is licensed and insured. Quality work you can trust."
           }
         ].map((item, index) => (
-          <motion.div 
-            key={index} 
-            className="p-6 border-2 border-border shadow-md hover:shadow-lg transition-all bg-background hover:-translate-y-0.5"
+          <motion.div
+            key={index}
+            className="relative p-8 rounded-2xl bg-card border border-border hover:border-primary/20 transition-all duration-300 hover:shadow-lg group"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
           >
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+              {item.icon}
+            </div>
             <h3 className="text-xl font-semibold mb-2 text-foreground">{item.title}</h3>
-            <p className="text-muted-foreground">{item.description}</p>
+            <p className="text-muted-foreground leading-relaxed">{item.description}</p>
           </motion.div>
         ))}
       </div>
@@ -47,20 +69,39 @@ const PainSection = () => (
 );
 
 const UrgencySection = ({ onGetStarted }) => (
-  <section className="py-12 bg-primary text-primary-foreground">
-    <div className="max-w-4xl mx-auto px-4 text-center">
-      <h2 className="text-3xl font-black mb-4" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-        Is Your House Giving You Nightmares?
-      </h2>
-      <p className="text-xl font-semibold mb-8 leading-relaxed" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
-        Remodel MONSTER devours home repairs for breakfast. No project too scary!
-      </p>
-      <button 
-        onClick={onGetStarted}
-        className="px-8 py-3 bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5 border-2 border-border"
+  <section className="relative py-16 md:py-24 overflow-hidden">
+    {/* Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+    <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+
+    <div className="relative max-w-3xl mx-auto px-4 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
-        Get Started Now!
-      </button>
+        <p className="text-amber-400 font-medium tracking-wide uppercase text-sm mb-3">
+          Don't wait — projects only get more expensive
+        </p>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white font-serif leading-tight">
+          Your Dream Home
+          <span className="block text-amber-400">Starts Here</span>
+        </h2>
+        <p className="text-lg text-slate-300 mb-10 max-w-xl mx-auto leading-relaxed">
+          Join thousands of homeowners who found the right contractor through our free matching service. No commitment required.
+        </p>
+        <button
+          onClick={onGetStarted}
+          className="inline-flex items-center gap-2 px-10 py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-bold text-lg rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-amber-500/20 active:translate-y-0"
+        >
+          Get Your Free Quote
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+      </motion.div>
     </div>
   </section>
 );
@@ -78,7 +119,7 @@ export default function HomePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const step = parseInt(searchParams.get("step") || "1");
-  
+
   // Single form state object
   const [formData, setFormData] = useState({
     // Core fields
@@ -98,11 +139,11 @@ export default function HomePage() {
     tcpa: "",
     tcpaLanguage: "",
     xxTrustedFormCertUrl: "",
-    
+
     // Tracking parameters
     transaction_id: "",
     source: "",
-    
+
     // Conditional fields for all job types
     addition_type: "",
     bathroomProjectType: "",
@@ -162,13 +203,13 @@ export default function HomePage() {
   }, []);
 
   const [isAccident, setIsAccident] = useState("Yes");
-  
+
   // Tracking data
   const [affiliateID, setAffiliateID] = useState(searchParams.get("AID"));
   const [clickID, setClickID] = useState(searchParams.get("clickid"));
   const [affiliateSubID, setAffiliateSubID] = useState(searchParams.get("SID"));
   const [affiliateRefID, setAffiliateRefID] = useState(searchParams.get("ARID"));
-  
+
   const calculateProgress = () => {
     const totalSteps = 5;
     return Math.min(100, Math.max(10, (step / totalSteps) * 100));
@@ -193,14 +234,14 @@ export default function HomePage() {
       'swimmingPoolProjectType', 'swimmingPoolServiceType', 'treesProjectType', 'windowsProjectType'
     ];
     const loadedData = {};
-    
+
     fieldsToLoad.forEach(field => {
       const storedValue = sessionStorage.getItem(field) || localStorage.getItem(field);
       if (storedValue) {
         loadedData[field] = storedValue;
       }
     });
-    
+
     if (Object.keys(loadedData).length > 0) {
       setFormData(prev => ({ ...prev, ...loadedData }));
     }
@@ -224,11 +265,8 @@ export default function HomePage() {
       }
     };
 
-    // Check immediately and then set up polling
     captureFormUrl();
     const interval = setInterval(captureFormUrl, 1000);
-
-    // Cleanup interval after 30 seconds
     const timeout = setTimeout(() => {
       clearInterval(interval);
     }, 30000);
@@ -238,7 +276,7 @@ export default function HomePage() {
       clearTimeout(timeout);
     };
   }, [formData.xxTrustedFormCertUrl, handleFieldChange]);
-  
+
   // Track affiliate information
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -266,18 +304,18 @@ export default function HomePage() {
     }
     if (clickid) sessionStorage.setItem("clickid", clickid);
     if (offerid) sessionStorage.setItem("offer_id", offerid);
-    
+
     const storedClickID = sessionStorage.getItem("clickid") || localStorage.getItem("clickid");
     const storedAffiliateID = sessionStorage.getItem("affiliate_id") || localStorage.getItem("affiliate_id");
     const storedAffiliateSubID = sessionStorage.getItem("affiliate_sub_id") || localStorage.getItem("affiliate_sub_id");
     const storedAffiliateRefID = sessionStorage.getItem("affiliate_ref_id") || localStorage.getItem("affiliate_ref_id");
-    
+
     if (phone) {
       const cleanPhone = phone.replace(/\D/g, '');
       const formattedPhone = cleanPhone.slice(-10);
       sessionStorage.setItem("phone", formattedPhone);
     }
-    
+
     if (storedClickID) setClickID(storedClickID);
     if (storedAffiliateID) setAffiliateID(storedAffiliateID);
     if (storedAffiliateSubID) setAffiliateSubID(storedAffiliateSubID);
@@ -290,11 +328,9 @@ export default function HomePage() {
   const handleSubmit = async () => {
     switch (step) {
       case 1:
-        // Step 1: Get started intro - no validation needed
         break;
-      
+
       case 2:
-        // Step 2: Job selection
         if (!formData.jobType) {
           toast.error("What service do you need? is required");
           return;
@@ -308,21 +344,19 @@ export default function HomePage() {
           return;
         }
         break;
-      
+
       case 3:
-        // Step 3: Job-specific details (conditional validation)
         if (formData.jobType) {
           const { validateConditionalFieldsForJobType } = require('@/utils/conditionalLogic');
           const conditionalErrors = validateConditionalFieldsForJobType(formData.jobType, formData);
           if (conditionalErrors.length > 0) {
-            toast.error(conditionalErrors[0]); // Show first error
+            toast.error(conditionalErrors[0]);
             return;
           }
         }
         break;
-      
+
       case 4:
-        // Step 4: Contact info
         if (!formData.firstName) {
           toast.error("First Name is required");
           return;
@@ -372,9 +406,8 @@ export default function HomePage() {
           return;
         }
         break;
-      
+
       case 5:
-        // Step 5: Confirmation
         if (!formData.tcpa) {
           toast.error("I agree to be contacted is required");
           return;
@@ -404,16 +437,13 @@ export default function HomePage() {
       });
 
       const data = await response.json();
-      
+
       if (response.ok) {
-        // Check if there's a redirect URL in the response
         if (data.redirectUrl) {
           window.location.href = data.redirectUrl;
         } else {
-          // Success but no redirect - show thanks message and send to next funnel
           toast.success("Thanks! We will be in touch. In the meantime, check out some additional offers from our partners.");
-          
-          // Show countdown and redirect after 5 seconds
+
           let countdown = 5;
           const countdownToast = toast.loading(`Redirecting to additional offers in ${countdown}s (click to go now)`, {
             duration: 5000,
@@ -424,7 +454,7 @@ export default function HomePage() {
               }
             }
           });
-          
+
           const countdownInterval = setInterval(() => {
             countdown--;
             if (countdown > 0) {
@@ -444,10 +474,8 @@ export default function HomePage() {
           }, 1000);
         }
       } else {
-        // Show rejection message with countdown redirect
         toast.error("Someone will call you back shortly. In the meantime, check out some additional offers from our partners.");
-        
-        // Show countdown and redirect after 5 seconds
+
         let countdown = 5;
         const countdownToast = toast.loading(`Redirecting to additional offers in ${countdown}s (click to go now)`, {
           duration: 5000,
@@ -458,7 +486,7 @@ export default function HomePage() {
             }
           }
         });
-        
+
         const countdownInterval = setInterval(() => {
           countdown--;
           if (countdown > 0) {
@@ -498,152 +526,76 @@ export default function HomePage() {
     handleSubmit();
   };
 
+  const backButtonClasses = "px-5 py-2.5 rounded-xl border border-border bg-card text-foreground hover:bg-muted transition-all text-sm font-medium hover:-translate-y-0.5 active:translate-y-0";
+  const continueButtonClasses = "px-6 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all text-sm hover:-translate-y-0.5 active:translate-y-0 shadow-md";
+
   return (
     <div className="min-h-screen">
-      <Hero 
-        isInjured={isAccident} 
-        setIsInjured={setIsAccident} 
+      <Hero
+        isInjured={isAccident}
+        setIsInjured={setIsAccident}
         handleSubmit={handleSubmit}
         progress={calculateProgress()}
         hideButtons={step > 1}
       >
         {step >= 1 && (
-          <form onSubmit={handleFormSubmit} className="mb-6">
+          <form onSubmit={handleFormSubmit} className="mb-4">
             {step === 1 && (
               <div className="space-y-4">
-                <Intro
-                  formData={formData}
-                  onChange={handleFieldChange}
-                  errors={{}}
-                />
+                <Intro formData={formData} onChange={handleFieldChange} errors={{}} />
                 <div className="flex justify-between mt-4">
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Back
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Continue
-                  </button>
+                  <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
+                  <button type="submit" className={continueButtonClasses}>Continue</button>
                 </div>
               </div>
             )}
-              
+
             {step === 2 && (
               <div className="space-y-4">
-                <JobDetails
-                  formData={formData}
-                  onChange={handleFieldChange}
-                  errors={{}}
-                />
+                <JobDetails formData={formData} onChange={handleFieldChange} errors={{}} />
                 <div className="flex justify-between mt-4">
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Back
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Continue
-                  </button>
+                  <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
+                  <button type="submit" className={continueButtonClasses}>Continue</button>
                 </div>
               </div>
             )}
-              
+
             {step === 3 && (
               <div className="space-y-4">
-                <SpecificDetails
-                  formData={formData}
-                  onChange={handleFieldChange}
-                  errors={{}}
-                />
+                <SpecificDetails formData={formData} onChange={handleFieldChange} errors={{}} />
                 <div className="flex justify-between mt-4">
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Back
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Continue
-                  </button>
+                  <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
+                  <button type="submit" className={continueButtonClasses}>Continue</button>
                 </div>
               </div>
             )}
-              
+
             {step === 4 && (
               <div className="space-y-4">
                 <div className="space-y-4">
-                  <PersonalInfo
-                    formData={formData}
-                    onChange={handleFieldChange}
-                    errors={{}}
-                  />
-                  <Location
-                    formData={formData}
-                    onChange={handleFieldChange}
-                    errors={{}}
-                  />
+                  <PersonalInfo formData={formData} onChange={handleFieldChange} errors={{}} />
+                  <Location formData={formData} onChange={handleFieldChange} errors={{}} />
                 </div>
                 <div className="flex justify-between mt-4">
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Back
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Continue
-                  </button>
+                  <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
+                  <button type="submit" className={continueButtonClasses}>Continue</button>
                 </div>
               </div>
             )}
-              
+
             {step === 5 && (
               <div className="space-y-4">
-                <Confirmation
-                  formData={formData}
-                  onChange={handleFieldChange}
-                  errors={{}}
-                />
+                <Confirmation formData={formData} onChange={handleFieldChange} errors={{}} />
                 <div className="flex justify-between mt-4">
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="px-4 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-muted transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Back
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-6 py-2 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all text-sm shadow-sm hover:-translate-y-0.5 active:translate-y-0.5"
-                  >
-                    Submit
-                  </button>
+                  <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
+                  <button type="submit" className={continueButtonClasses}>Submit</button>
                 </div>
               </div>
             )}
           </form>
         )}
       </Hero>
-      
+
       <PainSection />
       <BenefitsList />
       <UrgencySection onGetStarted={handleGetStarted} />

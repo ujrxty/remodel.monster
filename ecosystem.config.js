@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: "remodel.monster",
+    name: "remodelnow.monster",
     cwd: "/var/www/remodel.monster",
     script: "npm",
     args: "start",

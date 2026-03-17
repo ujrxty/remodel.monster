@@ -2,146 +2,85 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-/**
- * Benefits list section showing what users get with a free case review
- * Generated from offer configuration
- */
 function BenefitsList() {
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
+  const benefits = [
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+        </svg>
+      ),
+      title: "Get Matched Fast",
+      description: "Answer a few questions and we connect you with qualified local professionals within minutes."
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+        </svg>
+      ),
+      title: "Competitive Quotes",
+      description: "Compare pricing from multiple contractors to find the best value for your project."
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+        </svg>
+      ),
+      title: "Top-Rated Experts",
+      description: "Our network includes only experienced, highly-reviewed home improvement professionals."
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.745 3.745 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+        </svg>
+      ),
+      title: "100% Free Service",
+      description: "Our matching service is completely free for homeowners. No fees, no commitments, ever."
     }
-  };
-  
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  // Icon map with lightweight SVG icons
-  const iconMap = {
-    'phone': (
-      <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-      </svg>
-    ),
-    'dollar': (
-      <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd"/>
-      </svg>
-    ),
-    'briefcase': (
-      <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h2zm4-1a1 1 0 00-1 1v1h2V6a1 1 0 00-1-1zm1 5a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd"/>
-      </svg>
-    ),
-    'check': (
-      <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-      </svg>
-    ),
-  };
-
-  // Benefits data from configuration
-  const benefits = 
-    [
-      
-        {
-          icon: iconMap['phone'],
-          title: "Convenience",
-          description: "Access our services from anywhere, anytime."
-        },
-      
-        {
-          icon: iconMap['dollar'],
-          title: "Affordability",
-          description: "Quality services at unbeatable prices."
-        },
-      
-        {
-          icon: iconMap['briefcase'],
-          title: "Expertise",
-          description: "Our team consists of industry-leading professionals."
-        },
-      
-        {
-          icon: iconMap['check'],
-          title: "Trustworthy",
-          description: "We ensure 100% satisfaction on all our services."
-        }
-      
-    ]
-  ;
-
-  // Fix icon references in the benefits array (convert string to actual JSX)
-  const processedBenefits = benefits.map(benefit => {
-    // If the icon is a string reference to iconMap, evaluate it
-    if (typeof benefit.icon === 'string' && benefit.icon.startsWith('iconMap[')) {
-      const iconKey = benefit.icon.match(/iconMap\['(.+?)'\]/)[1];
-      return { ...benefit, icon: iconMap[iconKey] };
-    }
-    return benefit;
-  });
+  ];
 
   return (
-    <section className="py-12 md:py-16 bg-muted">
-      <div className="max-w-[1100px] mx-auto px-4 md:px-6">
+    <section className="py-16 md:py-24 bg-card">
+      <div className="max-w-6xl mx-auto px-4">
         <motion.div
-          initial={{ 
-            opacity: 0, 
-            y: 20 
-          }}
-          whileInView={{ 
-            opacity: 1, 
-            y: 0 
-          }}
-          viewport={{ 
-            once: true, 
-            margin: "-100px" 
-          }}
-          transition={{ 
-            duration: 0.5 
-          }}
-          className="text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">
-            Why Choose Our Services
+          <p className="text-primary font-medium tracking-wide uppercase text-sm mb-2">How it works</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
+            Simple, Fast, Reliable
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our online home improvement services are designed to add value to your home and simplify your life. Here&#39;s why you should choose us:
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            We've helped thousands of homeowners find the right contractor for their project.
           </p>
         </motion.div>
-        
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ 
-            once: true, 
-            margin: "-100px" 
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
-          {processedBenefits.map((benefit, index) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              variants={itemVariants}
-              className="bg-card rounded-lg p-6 shadow-md flex items-start border border-border"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="flex items-start gap-4 p-6 rounded-2xl border border-border hover:border-primary/20 bg-secondary/50 hover:bg-secondary transition-all duration-300"
             >
-              <div className="mr-4 mt-1">{benefit.icon}</div>
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                {benefit.icon}
+              </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-card-foreground">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+                <h3 className="text-lg font-semibold mb-1 text-foreground">{benefit.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
