@@ -12,6 +12,7 @@ const services = [
   { label: "Siding", href: "/?step=2&service=siding" },
   { label: "Flooring", href: "/?step=2&service=flooring" },
   { label: "Painting", href: "/?step=2&service=painting" },
+  { label: "Pest Control", href: "/call/pest-control" },
 ];
 
 export default function Navbar() {

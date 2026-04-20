@@ -111,9 +111,6 @@ const UrgencySection = ({ onGetStarted }) => (
 import Intro from './form/intro';
 import JobDetails from './form/jobDetails';
 import SpecificDetails from './form/specificDetails';
-import PersonalInfo from './form/personalInfo';
-import Location from './form/location';
-import Confirmation from './form/confirmation';
 
 export default function HomePage() {
   const router = useRouter();
@@ -211,7 +208,7 @@ export default function HomePage() {
   const [affiliateRefID, setAffiliateRefID] = useState(searchParams.get("ARID"));
 
   const calculateProgress = () => {
-    const totalSteps = 5;
+    const totalSteps = 4;
     return Math.min(100, Math.max(10, (step / totalSteps) * 100));
   };
 
@@ -357,67 +354,11 @@ export default function HomePage() {
         break;
 
       case 4:
-        if (!formData.firstName) {
-          toast.error("First Name is required");
-          return;
-        }
-        if (formData.firstName.length < 1 || formData.firstName.length > 254) {
-          toast.error("First Name must be 1-254 characters");
-          return;
-        }
-        if (!formData.lastName) {
-          toast.error("Last Name is required");
-          return;
-        }
-        if (formData.lastName.length < 1 || formData.lastName.length > 254) {
-          toast.error("Last Name must be 1-254 characters");
-          return;
-        }
-        if (!formData.email) {
-          toast.error("Email Address is required");
-          return;
-        }
-        if (!new RegExp('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$').test(formData.email)) {
-          toast.error("Please enter a valid email address");
-          return;
-        }
-        if (!formData.phoneNumber) {
-          toast.error("Phone Number is required");
-          return;
-        }
-        if (!new RegExp('^\\d{10}$').test(formData.phoneNumber)) {
-          toast.error("Please enter a valid 10-digit phone number");
-          return;
-        }
-        if (!formData.address) {
-          toast.error("Address is required");
-          return;
-        }
-        if (!formData.zip) {
-          toast.error("Zip Code is required");
-          return;
-        }
-        if (!new RegExp('^\\d{5,8}$').test(formData.zip)) {
-          toast.error("Please enter a valid zip code (5-8 digits)");
-          return;
-        }
-        if (!formData.bestCallTime) {
-          toast.error("Best time to call is required");
-          return;
-        }
-        break;
-
-      case 5:
-        if (!formData.tcpa) {
-          toast.error("I agree to be contacted is required");
-          return;
-        }
+        // Call Now step — no validation needed
         break;
     }
 
-    if (step === 5) {
-      await submitToAPI();
-    } else {
+    if (step < 4) {
       router.push(`/?step=${step + 1}`);
     }
   };
@@ -571,24 +512,21 @@ export default function HomePage() {
             )}
 
             {step === 4 && (
-              <div className="space-y-4">
-                <div className="space-y-4">
-                  <PersonalInfo formData={formData} onChange={handleFieldChange} errors={{}} />
-                  <Location formData={formData} onChange={handleFieldChange} errors={{}} />
+              <div className="space-y-6 text-center py-4">
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-2">Ready to Get Started?</h2>
+                  <p className="text-muted-foreground">Call us now and speak with a specialist about your project.</p>
                 </div>
-                <div className="flex justify-between mt-4">
+                <a
+                  href="tel:+18005550000"
+                  className="flex items-center justify-center gap-3 w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+                >
+                  <span>📞</span>
+                  <span>Call Now (800) 555-0000</span>
+                </a>
+                <p className="text-sm text-muted-foreground">Available 7 days a week · Free consultation · No commitment</p>
+                <div className="flex justify-start mt-4">
                   <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
-                  <button type="submit" className={continueButtonClasses}>Continue</button>
-                </div>
-              </div>
-            )}
-
-            {step === 5 && (
-              <div className="space-y-4">
-                <Confirmation formData={formData} onChange={handleFieldChange} errors={{}} />
-                <div className="flex justify-between mt-4">
-                  <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
-                  <button type="submit" className={continueButtonClasses}>Submit</button>
                 </div>
               </div>
             )}

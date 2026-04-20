@@ -90,7 +90,7 @@ export const jobTypeConfig = {
     label: "Painting Services"
   },
   pest_control: {
-    enabled: false,
+    enabled: true,
     DID: null,
     label: "Pest Control"
   },
