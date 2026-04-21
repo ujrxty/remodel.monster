@@ -8,6 +8,13 @@ import toast from "react-hot-toast";
 // Components
 import Hero from './Hero';
 import BenefitsList from './BenefitsList';
+import { getJobTypeDID } from '../config/jobTypes';
+
+function formatDidDisplay(tel) {
+  const digits = (tel || '').replace(/\D/g, '').replace(/^1/, '');
+  if (digits.length !== 10) return tel || '';
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
 
 const PainSection = () => (
   <section className="py-16 md:py-24 bg-secondary">
@@ -517,13 +524,19 @@ export default function HomePage() {
                   <h2 className="text-2xl font-bold text-foreground mb-2">Ready to Get Started?</h2>
                   <p className="text-muted-foreground">Call us now and speak with a specialist about your project.</p>
                 </div>
-                <a
-                  href="tel:+18005550000"
-                  className="flex items-center justify-center gap-3 w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
-                >
-                  <span>📞</span>
-                  <span>Call Now (800) 555-0000</span>
-                </a>
+                {(() => {
+                  const did = getJobTypeDID(formData.jobType);
+                  const tel = did || 'tel:+18887738655';
+                  return (
+                    <a
+                      href={tel}
+                      className="flex items-center justify-center gap-3 w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
+                    >
+                      <span>📞</span>
+                      <span>Call Now {formatDidDisplay(tel)}</span>
+                    </a>
+                  );
+                })()}
                 <p className="text-sm text-muted-foreground">Available 7 days a week · Free consultation · No commitment</p>
                 <div className="flex justify-start mt-4">
                   <button type="button" onClick={handleBack} className={backButtonClasses}>Back</button>
