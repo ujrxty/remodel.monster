@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "Call Now for Pest Control | Expert Pest Removal & Prevention",
-  description: "Need pest control? Call (800) 555-0000 now for an instant quote. Skip the form, talk to a specialist, same-day service available.",
+  description: "Need pest control? Call (888) 773-8655 now for an instant quote. Skip the form, talk to a specialist, same-day service available.",
   keywords: ["pest control", "exterminator", "pest removal", "bug control", "rodent control", "call now"],
 };
 
@@ -39,10 +39,10 @@ export default function PestControlCallPage() {
           {/* Main Call Button */}
           <div className="mb-8">
             <a
-              href="tel:+18005550000"
+              href="tel:+18887738655"
               className="block w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-center"
             >
-              📞 Call (800) 555-0000
+              📞 Call (888) 773-8655
             </a>
           </div>
 
@@ -88,10 +88,10 @@ export default function PestControlCallPage() {
           {/* Secondary Call Button */}
           <div className="mb-8">
             <a
-              href="tel:+18005550000"
+              href="tel:+18887738655"
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-semibold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-center"
             >
-              📱 Tap to Call (800) 555-0000
+              📱 Tap to Call (888) 773-8655
             </a>
           </div>
 
@@ -126,10 +126,10 @@ export default function PestControlCallPage() {
               Ready to Reclaim Your Home?
             </p>
             <a
-              href="tel:+18005550000"
+              href="tel:+18887738655"
               className="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
             >
-              🚀 Call (800) 555-0000 Now
+              🚀 Call (888) 773-8655 Now
             </a>
           </div>
 
