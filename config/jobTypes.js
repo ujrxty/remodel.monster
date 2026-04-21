@@ -11,7 +11,7 @@ export const jobTypeConfig = {
   },
   bathroom: {
     enabled: true,
-    DID: null, 
+    DID: "tel:+18884571151",
     label: "Bathroom Remodeling"
   },
   cabinets: {
@@ -66,7 +66,7 @@ export const jobTypeConfig = {
   },
   hvac: {
     enabled: true,
-    DID: null,
+    DID: "tel:+18885145175",
     label: "HVAC Services"
   },
   insulation: {
@@ -91,7 +91,7 @@ export const jobTypeConfig = {
   },
   pest_control: {
     enabled: true,
-    DID: null,
+    DID: "tel:+18887738655",
     label: "Pest Control"
   },
   plumbing: {
@@ -136,7 +136,7 @@ export const jobTypeConfig = {
   },
   windows: {
     enabled: true,
-    DID: "tel:+18662043787",
+    DID: "tel:+18884485450",
     label: "Window Installation"
   }
 };

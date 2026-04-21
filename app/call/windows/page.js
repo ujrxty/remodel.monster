@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: "Call Now for Windows | Expert Window Installation & Replacement",
-  description: "Need windows replaced or repaired? Call (866) 204-3787 now for instant quote. Skip the questions, talk to a specialist, same-day service available.",
+  description: "Need windows replaced or repaired? Call (888) 448-5450 now for instant quote. Skip the questions, talk to a specialist, same-day service available.",
   keywords: ["windows", "window replacement", "window installation", "window repair", "call now", "instant quote"],
 };
 
@@ -39,10 +39,10 @@ export default function WindowsCallPage() {
           {/* Main Call Button */}
           <div className="mb-8">
             <a 
-              href="tel:+18662043787" 
+              href="tel:+18884485450" 
               className="block w-full bg-green-600 hover:bg-green-700 text-white text-2xl font-bold py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-center"
             >
-              📞 Call (866) 204-3787
+              📞 Call (888) 448-5450
             </a>
           </div>
 
@@ -88,10 +88,10 @@ export default function WindowsCallPage() {
           {/* Secondary Call Button */}
           <div className="mb-8">
             <a 
-              href="tel:+18662043787" 
+              href="tel:+18884485450" 
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-semibold py-4 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-center"
             >
-              📱 Tap to Call (866) 204-3787
+              📱 Tap to Call (888) 448-5450
             </a>
           </div>
 
@@ -126,10 +126,10 @@ export default function WindowsCallPage() {
               Ready to Transform Your Home?
             </p>
             <a 
-              href="tel:+18662043787" 
+              href="tel:+18884485450" 
               className="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
             >
-              🚀 Call (866) 204-3787 Now
+              🚀 Call (888) 448-5450 Now
             </a>
           </div>
 
